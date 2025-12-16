@@ -70,7 +70,7 @@ Step 3: Install Mods
 So:   HoboMods\
       ├── CoolItemsMod\
       │   ├── mod.json  __________________________ (Yes this thingy is AI generated no clue how to type it myself lol)
-      │   ├── items\
+      │   ├── 
       │   └── recipes\
       └── AnotherMod\
           └── ...
@@ -85,5 +85,6 @@ If anything doesn't work or you don't understand something you can come and ask 
 Also if you want to uninstall this because it's still a work in progress and might be really buggy (sorry):
 1. Delete the BepInEx folder from your game folder
 2. Verify game files through Steam
+
 
 
