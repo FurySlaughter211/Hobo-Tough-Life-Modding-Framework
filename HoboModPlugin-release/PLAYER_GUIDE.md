@@ -44,7 +44,7 @@ BepInEx is the mod loader/code injector that makes modding this game possible.
 Step 2: Set up my HoboModFramework
 
 
-1. In the same folder as this PLAYER_GUIDE.txt should be a file called HoboModPlugin.dll (That is the little guy that does the magic)
+1. In the same folder as this PLAYER_GUIDE.md should be a file called HoboModPlugin.dll (That is the little guy that does the magic)
 2. Do the same for Newtonsoft.Json.dll
    Also dont worry about the other files in the folder they are just for the development process of the mods   
 
@@ -87,6 +87,7 @@ If anything doesn't work or you don't understand something you can come and ask 
 Also if you want to uninstall this because it's still a work in progress and might be really buggy (sorry):
 1. Delete the BepInEx folder from your game folder
 2. Verify game files through Steam
+
 
 
 
