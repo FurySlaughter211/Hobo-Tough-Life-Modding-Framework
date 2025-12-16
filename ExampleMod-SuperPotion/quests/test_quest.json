@@ -1,0 +1,19 @@
+{
+    "id": "test_quest",
+    "title": "Test Quest",
+    "stages": [
+        {
+            "id": "start",
+            "description": "Collect a Roll to complete this quest",
+            "type": "wait",
+            "wait": {
+                "type": "item",
+                "item_id": 1,
+                "count": 1
+            },
+            "on_complete": {
+                "action": "quest_done"
+            }
+        }
+    ]
+}

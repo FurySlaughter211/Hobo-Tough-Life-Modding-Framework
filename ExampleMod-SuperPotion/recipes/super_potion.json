@@ -1,0 +1,15 @@
+{
+    "id": "super_potion_recipe",
+    "result": "super_potion",
+    "resultCount": 1,
+    "name": "Super Potion",
+    "bench": "stove",
+    "skillRequired": 0,
+    "autoUnlock": true,
+    "ingredients": [
+        {
+            "item": 1,
+            "count": 2
+        }
+    ]
+}

@@ -1,0 +1,40 @@
+{
+  "id": "super_potion",
+  "baseItem": 4,
+  "type": "consumable",
+  "name": "Super Potion",
+  "description": "A powerful healing potion that restores all stats to maximum",
+  "icon": "assets/icons/super_potion.png",
+  "price": 200,
+  "weight": 0.2,
+  "effects": [
+    {
+      "stat": "health",
+      "value": "max"
+    },
+    {
+      "stat": "energy",
+      "value": "max"
+    },
+    {
+      "stat": "food",
+      "value": "max"
+    },
+    {
+      "stat": "morale",
+      "value": "max"
+    },
+    {
+      "stat": "warmth",
+      "value": "max"
+    },
+    {
+      "stat": "dryness",
+      "value": "max"
+    },
+    {
+      "stat": "freshness",
+      "value": "min"
+    }
+  ]
+}
