@@ -1,0 +1,12 @@
+C:\Users\User\OneDrive\Dokumente\HoboMOd\HoboModPlugin-release\obj\Release\net6.0\HoboModPlugin.csproj.AssemblyReference.cache
+C:\Users\User\OneDrive\Dokumente\HoboMOd\HoboModPlugin-release\obj\Release\net6.0\HoboModPlugin.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\OneDrive\Dokumente\HoboMOd\HoboModPlugin-release\obj\Release\net6.0\HoboModPlugin.AssemblyInfoInputs.cache
+C:\Users\User\OneDrive\Dokumente\HoboMOd\HoboModPlugin-release\obj\Release\net6.0\HoboModPlugin.AssemblyInfo.cs
+C:\Users\User\OneDrive\Dokumente\HoboMOd\HoboModPlugin-release\obj\Release\net6.0\HoboModPlugin.csproj.CoreCompileInputs.cache
+C:\Users\User\OneDrive\Dokumente\HoboMOd\HoboModPlugin-release\bin\Release\net6.0\HoboModPlugin.deps.json
+C:\Users\User\OneDrive\Dokumente\HoboMOd\HoboModPlugin-release\bin\Release\net6.0\HoboModPlugin.dll
+C:\Users\User\OneDrive\Dokumente\HoboMOd\HoboModPlugin-release\bin\Release\net6.0\HoboModPlugin.pdb
+C:\Users\User\OneDrive\Dokumente\HoboMOd\HoboModPlugin-release\obj\Release\net6.0\HoboModPlugin.dll
+C:\Users\User\OneDrive\Dokumente\HoboMOd\HoboModPlugin-release\obj\Release\net6.0\refint\HoboModPlugin.dll
+C:\Users\User\OneDrive\Dokumente\HoboMOd\HoboModPlugin-release\obj\Release\net6.0\HoboModPlugin.pdb
+C:\Users\User\OneDrive\Dokumente\HoboMOd\HoboModPlugin-release\obj\Release\net6.0\ref\HoboModPlugin.dll
