@@ -126,9 +126,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <!-- Embedded Resources -->
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\hobomod_core_shaders" />
-  </ItemGroup>
+
 
 </Project>
