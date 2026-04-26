@@ -1,0 +1,9 @@
+[
+  {
+    "TableID": "Popelnik",
+    "ItemID": "junkies_juice",
+    "Amount": 5,
+    "DropChance": 10000,
+    "PricePercent": 100
+  }
+]

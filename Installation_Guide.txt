@@ -1,5 +1,6 @@
 Hi Guys in this guide I'll do my best to help you install the Plugin that makes modding possible for Hobo: Tough Life
 
+WARNING: If you want to use this PLEASE create a new safe file for it. Otherwise it might get corrupted. Additionally, this is not tested in multiplayer so it will probably not work there yet. 
 
 
 
@@ -70,7 +71,7 @@ Step 3: Install Mods
 
 So:   HoboMods\
       ├── CoolItemsMod\
-      │   ├── mod.json                           (Yes this thingy is AI generated no clue how to type it myself lol)
+      │   ├── mod.json                          
       │   ├── items\
       │   └── recipes\
       └── AnotherMod\
