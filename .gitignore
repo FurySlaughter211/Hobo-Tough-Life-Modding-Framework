@@ -14,7 +14,6 @@ BepInEx/
 UnityPlayer.dll
 UnityCrashHandler64.exe
 *.log
-*.txt
 !HANDOFF.md
 !Installation_Guide.txt
 !build_output.txt

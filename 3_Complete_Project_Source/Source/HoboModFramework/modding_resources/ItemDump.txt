@@ -1,0 +1,685 @@
+=== ITEM DATABASE DUMP (12/17/2025 11:07:44 PM) ===
+Total items: 682
+
+ID:   94 | Type:Bag          | Price:    0 | Weight:  0.5 | Name: 
+ID:   95 | Type:Bag          | Price:    0 | Weight:  0.5 | Name: 
+ID:  290 | Type:Bag          | Price:   15 | Weight:  0.3 | Name: Makeshift luggage
+ID:  289 | Type:Bag          | Price:   50 | Weight:  0.3 | Name: Plastic bag
+ID:  291 | Type:Bag          | Price:  130 | Weight:  0.5 | Name: Cloth bag
+ID:  292 | Type:Bag          | Price:  300 | Weight:  0.5 | Name: Stylish satchel
+ID:  293 | Type:Bag          | Price:  800 | Weight:  1.0 | Name: Canvas backpack
+ID:  294 | Type:Bag          | Price: 2000 | Weight:  1.0 | Name: Large backpack
+ID:  646 | Type:Bag          | Price: 4000 | Weight:  1.0 | Name: Expedition backpack
+ID:  465 | Type:Companion    | Price:  500 | Weight:  0.0 | Name: Mutt
+ID:  466 | Type:Companion    | Price:  500 | Weight:  0.0 | Name: Rottweiler
+ID:  467 | Type:Companion    | Price:  500 | Weight:  0.0 | Name: German Shepherd
+ID:  496 | Type:Companion    | Price:    0 | Weight:  0.0 | Name: Entrusted Dog
+ID:  560 | Type:Companion    | Price:    0 | Weight:  0.0 | Name: Colleague
+ID:  612 | Type:Companion    | Price:    0 | Weight:  0.0 | Name: Joe
+ID:  307 | Type:Consumable   | Price:    2 | Weight:  0.1 | Name: Scrap food
+ID:  308 | Type:Consumable   | Price:    4 | Weight:  0.1 | Name: Scrap food (deluxe)
+ID:  310 | Type:Consumable   | Price:    2 | Weight:  0.1 | Name: Strained drink
+ID:  309 | Type:Consumable   | Price:    2 | Weight:  0.1 | Name: Strained alcohol
+ID:  113 | Type:Consumable   | Price:   20 | Weight:  0.1 | Name: Grub
+ID:  362 | Type:Consumable   | Price:   30 | Weight:  0.3 | Name: Tasty Grub
+ID:  363 | Type:Consumable   | Price:   40 | Weight:  0.3 | Name: Great Grub
+ID:  486 | Type:Consumable   | Price:   50 | Weight:  0.3 | Name: Broth
+ID:    1 | Type:Consumable   | Price:    3 | Weight:  0.1 | Name: Roll
+ID:    2 | Type:Consumable   | Price:   30 | Weight:  0.1 | Name: Loaf of Bread
+ID:    3 | Type:Consumable   | Price:   60 | Weight:  0.1 | Name: Hamburger
+ID:    6 | Type:Consumable   | Price:   30 | Weight:  0.1 | Name: Ham Sub
+ID:  331 | Type:Consumable   | Price:   20 | Weight:  0.3 | Name: Bitten Baquette
+ID:  334 | Type:Consumable   | Price:    5 | Weight:  0.1 | Name: Chewing gum
+ID:    9 | Type:Consumable   | Price:   20 | Weight:  0.1 | Name: Chocolate Bar
+ID:    7 | Type:Consumable   | Price:   10 | Weight:  0.1 | Name: Apple
+ID:    8 | Type:Consumable   | Price:   10 | Weight:  0.1 | Name: Lemon
+ID:  204 | Type:Consumable   | Price:   10 | Weight:  0.3 | Name: Sliced ham
+ID:  205 | Type:Consumable   | Price:   10 | Weight:  0.3 | Name: Spaghetti
+ID:    4 | Type:Consumable   | Price:  100 | Weight:  0.1 | Name: Dog Food
+ID:   20 | Type:Consumable   | Price:   25 | Weight:  0.1 | Name: 
+ID:    5 | Type:Consumable   | Price:   15 | Weight:  0.1 | Name: Paté
+ID:   10 | Type:Consumable   | Price:    5 | Weight:  0.1 | Name: Dubious Pizza
+ID:   11 | Type:Consumable   | Price:    5 | Weight:  0.1 | Name: Suspicious Hamburger
+ID:   12 | Type:Consumable   | Price:    5 | Weight:  0.1 | Name: Expired bread
+ID:   13 | Type:Consumable   | Price:    5 | Weight:  0.1 | Name: Unfinished cookies
+ID:   14 | Type:Consumable   | Price:    5 | Weight:  0.1 | Name: Risky Kompot
+ID:   15 | Type:Consumable   | Price:    3 | Weight:  0.1 | Name: Unfinished apple
+ID:  302 | Type:Consumable   | Price:    0 | Weight:  0.1 | Name: Unfinished pâté
+ID:   96 | Type:Consumable   | Price:   99 | Weight:  0.1 | Name: Pizza
+ID:   97 | Type:Consumable   | Price:   10 | Weight:  0.1 | Name: Unfinished kebab.
+ID:   98 | Type:Consumable   | Price:    5 | Weight:  0.1 | Name: Weird cheese
+ID:   99 | Type:Consumable   | Price:    3 | Weight:  0.1 | Name: Rotting vegetables
+ID:  100 | Type:Consumable   | Price:    5 | Weight:  0.1 | Name: A piece of salami
+ID:  101 | Type:Consumable   | Price:    0 | Weight:  0.1 | Name: The rest of the whiskey
+ID:  102 | Type:Consumable   | Price:    0 | Weight:  0.1 | Name: The rest of boxed wine
+ID:  103 | Type:Consumable   | Price:    0 | Weight:  0.1 | Name: Unfinished energy drink
+ID:  104 | Type:Consumable   | Price:    5 | Weight:  0.1 | Name: Unfinished coffee
+ID:  105 | Type:Consumable   | Price:    0 | Weight:  0.1 | Name: Unfinished Coke
+ID:  108 | Type:Consumable   | Price:  800 | Weight:  0.1 | Name: Whiskey
+ID:  106 | Type:Consumable   | Price:  600 | Weight:  0.1 | Name: Quality Vodka
+ID:  107 | Type:Consumable   | Price:  800 | Weight:  0.1 | Name: Absinthe
+ID:  381 | Type:Consumable   | Price:  600 | Weight:  0.1 | Name: White rum
+ID:  110 | Type:Consumable   | Price:   40 | Weight:  0.1 | Name: Coffee
+ID:  109 | Type:Consumable   | Price:   25 | Weight:  0.1 | Name: Energy drink
+ID:  490 | Type:Consumable   | Price:   70 | Weight:  0.1 | Name: Dark beer
+ID:  111 | Type:Consumable   | Price:   25 | Weight:  0.1 | Name: Coke
+ID:  361 | Type:Consumable   | Price:   20 | Weight:  0.1 | Name: Lifebringer
+ID:  364 | Type:Consumable   | Price:   50 | Weight:  0.1 | Name: Great lifebringer
+ID:  398 | Type:Consumable   | Price:   30 | Weight:  0.1 | Name: Weak tea
+ID:  382 | Type:Consumable   | Price:  100 | Weight:  0.1 | Name: Healing tea
+ID:  303 | Type:Consumable   | Price:  800 | Weight:  0.3 | Name: Goulash special
+ID:  304 | Type:Consumable   | Price:  600 | Weight:  0.3 | Name: Mince with potatoes
+ID:  196 | Type:Consumable   | Price:  600 | Weight:  0.3 | Name: Shot sparrows
+ID:  112 | Type:Consumable   | Price:  600 | Weight:  0.1 | Name: The macho toast
+ID:  114 | Type:Consumable   | Price:   15 | Weight:  0.3 | Name: 
+ID:  301 | Type:Consumable   | Price:    2 | Weight:  0.1 | Name: Butt
+ID:  210 | Type:Consumable   | Price:    5 | Weight:  0.1 | Name: Recycled smoke
+ID:  199 | Type:Consumable   | Price:   10 | Weight:  0.1 | Name: Good smoke
+ID:  211 | Type:Consumable   | Price:   30 | Weight:  0.1 | Name: Quality smoke
+ID:  194 | Type:Consumable   | Price:  100 | Weight:  0.1 | Name: Merkur cigarettes
+ID:  197 | Type:Consumable   | Price:   10 | Weight:  0.1 | Name: Wet wipes
+ID:  195 | Type:Consumable   | Price:    5 | Weight:  0.1 | Name: The rest of soap
+ID:  329 | Type:Consumable   | Price:   30 | Weight:  0.3 | Name: Soap
+ID:  349 | Type:Consumable   | Price:   50 | Weight:  0.3 | Name: Deodorant
+ID:  203 | Type:Consumable   | Price:   30 | Weight:  0.1 | Name: Bandage
+ID:  202 | Type:Consumable   | Price:   50 | Weight:  0.1 | Name: Antidepressants
+ID:  201 | Type:Consumable   | Price:   70 | Weight:  0.1 | Name: Antibiotics
+ID:  200 | Type:Consumable   | Price:   50 | Weight:  0.1 | Name: Nitrin
+ID:  300 | Type:Consumable   | Price:   20 | Weight:  0.1 | Name: Scratch card
+ID:  342 | Type:Consumable   | Price:   60 | Weight:  0.1 | Name: PlayGuy
+ID:  482 | Type:Consumable   | Price:   60 | Weight:  0.0 | Name: Serious book
+ID:  346 | Type:Consumable   | Price:   50 | Weight:  0.3 | Name: Kombucha
+ID:  351 | Type:Consumable   | Price:  100 | Weight:  0.3 | Name: Hiking medkit
+ID:  383 | Type:Consumable   | Price:   20 | Weight:  0.1 | Name: Herbs
+ID:  360 | Type:Consumable   | Price:   50 | Weight:  0.3 | Name: Paint Thinner
+ID:  198 | Type:Consumable   | Price:   10 | Weight:  0.1 | Name: Spices
+ID:  480 | Type:Consumable   | Price:   15 | Weight:  0.3 | Name: Bottled Water
+ID:  207 | Type:Consumable   | Price:   15 | Weight:  0.1 | Name: 
+ID:  212 | Type:Consumable   | Price:   50 | Weight:  0.0 | Name: Steampack
+ID:  213 | Type:Consumable   | Price:  100 | Weight:  0.0 | Name: Super Steampack
+ID:  214 | Type:Consumable   | Price:   10 | Weight:  0.1 | Name: Hand-rolled smoke deluxe
+ID:  319 | Type:Consumable   | Price:   30 | Weight:  0.3 | Name: 
+ID:  320 | Type:Consumable   | Price:   60 | Weight:  0.3 | Name: 
+ID:  321 | Type:Consumable   | Price:  100 | Weight:  0.3 | Name: 
+ID:  325 | Type:Consumable   | Price:   30 | Weight:  0.3 | Name: 
+ID:  322 | Type:Consumable   | Price:    0 | Weight:  0.1 | Name: Chucked lunch
+ID:  323 | Type:Consumable   | Price:    0 | Weight:  0.1 | Name: Vegetables
+ID:  324 | Type:Consumable   | Price:    0 | Weight:  0.1 | Name: Steak
+ID:  354 | Type:Consumable   | Price: 2000 | Weight:  0.1 | Name: Talisman of Recovery
+ID:  355 | Type:Consumable   | Price: 2000 | Weight:  0.1 | Name: Talisman of Recovery
+ID:  356 | Type:Consumable   | Price: 2000 | Weight:  0.1 | Name: Talisman of Recovery
+ID:  357 | Type:Consumable   | Price: 2000 | Weight:  0.1 | Name: Talisman of Recovery
+ID:  358 | Type:Consumable   | Price: 2000 | Weight:  0.1 | Name: Talisman of Recovery
+ID:  359 | Type:Consumable   | Price: 2000 | Weight:  0.1 | Name: Talisman of Recovery
+ID:  681 | Type:Consumable   | Price: 2000 | Weight:  0.1 | Name: Talisman of Recovery
+ID:  481 | Type:Consumable   | Price:   30 | Weight:  0.0 | Name: 
+ID:  555 | Type:Consumable   | Price:   30 | Weight:  0.1 | Name: Healing salve
+ID:  556 | Type:Consumable   | Price:   60 | Weight:  0.1 | Name: Super-healing salve
+ID:  557 | Type:Consumable   | Price:  100 | Weight:  0.1 | Name: Meth
+ID:  558 | Type:Consumable   | Price:  800 | Weight:  0.1 | Name: Kraken
+ID:  559 | Type:Consumable   | Price:    0 | Weight:  0.3 | Name: Strecker's bag (old)
+ID:  574 | Type:Consumable   | Price:   50 | Weight:  0.1 | Name: Vortex
+ID:  576 | Type:Consumable   | Price:    0 | Weight:  0.1 | Name: Dubious package
+ID:  577 | Type:Consumable   | Price:    0 | Weight:  0.1 | Name: Controversial Package
+ID:  579 | Type:Consumable   | Price:  300 | Weight:  0.1 | Name: Meth Deluxe for Sale
+ID:  581 | Type:Consumable   | Price: 1800 | Weight:  0.1 | Name: Sergei's moonshine
+ID:  582 | Type:Consumable   | Price: 1800 | Weight:  0.1 | Name: Cuban cigar
+ID:  593 | Type:Consumable   | Price:    0 | Weight:  0.1 | Name: Don Kitty's Reward
+ID:  598 | Type:Consumable   | Price:    0 | Weight:  0.3 | Name: Tony's clothes
+ID:  601 | Type:Consumable   | Price: 2500 | Weight:  0.1 | Name: Chibouk
+ID:  611 | Type:Consumable   | Price:    0 | Weight:  0.1 | Name: Kraken 2.0
+ID:  617 | Type:Consumable   | Price:    0 | Weight:  0.1 | Name: Baron's Purse
+ID:  619 | Type:Consumable   | Price:  100 | Weight:  0.1 | Name: Tincture
+ID:  620 | Type:Consumable   | Price:  150 | Weight:  0.1 | Name: Meth Deluxe
+ID:  625 | Type:Consumable   | Price:    0 | Weight:  1.0 | Name: A Sack of Junk
+ID:  627 | Type:Consumable   | Price:    0 | Weight:  0.1 | Name: Henry's wallet
+ID:  630 | Type:Consumable   | Price:   70 | Weight:  0.1 | Name: Quality coffee
+ID:  631 | Type:Consumable   | Price:  100 | Weight:  0.1 | Name: Gourmet coffee
+ID:  632 | Type:Consumable   | Price:   10 | Weight:  0.1 | Name: Pepper
+ID:  633 | Type:Consumable   | Price:   10 | Weight:  0.1 | Name: Tomato
+ID:  634 | Type:Consumable   | Price:   40 | Weight:  0.1 | Name: Cabbage
+ID:  635 | Type:Consumable   | Price:   20 | Weight:  0.1 | Name: Cucumber
+ID:  636 | Type:Consumable   | Price:   10 | Weight:  0.1 | Name: Potato
+ID:  637 | Type:Consumable   | Price:  100 | Weight:  1.0 | Name: Sack of potatoes
+ID:  638 | Type:Consumable   | Price:   40 | Weight:  0.1 | Name: Purée
+ID:  639 | Type:Consumable   | Price:   50 | Weight:  0.1 | Name: Cream
+ID:  649 | Type:Consumable   | Price:    0 | Weight:  0.3 | Name: Watermelon
+ID:   16 | Type:Consumable   | Price:    8 | Weight:  0.1 | Name: Canned beer
+ID:   17 | Type:Consumable   | Price:   10 | Weight:  0.1 | Name: Bottled beer
+ID:  394 | Type:Consumable   | Price:   25 | Weight:  0.1 | Name: Draft beer
+ID:  653 | Type:Consumable   | Price:   40 | Weight:  0.1 | Name: Irish beer
+ID:  650 | Type:Consumable   | Price:   30 | Weight:  0.1 | Name: Peppermint liqueur
+ID:   19 | Type:Consumable   | Price:   50 | Weight:  0.1 | Name: Rum
+ID:  651 | Type:Consumable   | Price:   80 | Weight:  0.1 | Name: Vodka
+ID:   18 | Type:Consumable   | Price:   20 | Weight:  0.1 | Name: Boxed wine
+ID:  206 | Type:Consumable   | Price:   40 | Weight:  0.1 | Name: Bottled Wine
+ID:  652 | Type:Consumable   | Price:   90 | Weight:  0.1 | Name: Luxurious wine
+ID:  654 | Type:Consumable   | Price:  200 | Weight:  0.1 | Name: Bourbon
+ID:  655 | Type:Consumable   | Price:  200 | Weight:  0.1 | Name: Gin
+ID:  656 | Type:Consumable   | Price:  200 | Weight:  0.1 | Name: Cognac
+ID:  657 | Type:Consumable   | Price:  200 | Weight:  0.1 | Name: Tequila
+ID:  680 | Type:Consumable   | Price:   90 | Weight:  0.1 | Name: Noodles
+ID:  296 | Type:Gear         | Price:   30 | Weight:  0.5 | Name: Holey shirt
+ID:  297 | Type:Gear         | Price:   30 | Weight:  0.5 | Name: Holey pants
+ID:  298 | Type:Gear         | Price:   30 | Weight:  0.5 | Name: Worn out sneakers
+ID:  117 | Type:Gear         | Price:   50 | Weight:  0.5 | Name: Windcheater
+ID:  118 | Type:Gear         | Price:   60 | Weight:  0.5 | Name: Sports jacket
+ID:  119 | Type:Gear         | Price:  100 | Weight:  0.5 | Name: Retro denim jacket
+ID:  120 | Type:Gear         | Price:  150 | Weight:  0.5 | Name: Chic denim jacket
+ID:  121 | Type:Gear         | Price:  200 | Weight:  0.5 | Name: Chic denim jacket (deluxe)
+ID:  125 | Type:Gear         | Price:  100 | Weight:  0.5 | Name: Sweatshirt
+ID:  126 | Type:Gear         | Price:  200 | Weight:  0.5 | Name: Sweatshirt (deluxe)
+ID:  122 | Type:Gear         | Price:  100 | Weight:  0.5 | Name: Cheap jacket
+ID:  123 | Type:Gear         | Price:  180 | Weight:  0.5 | Name: Ordinary jacket
+ID:  124 | Type:Gear         | Price:  250 | Weight:  0.5 | Name: Designer Jacket
+ID:  127 | Type:Gear         | Price:  300 | Weight:  0.5 | Name: Leather jacket
+ID:  128 | Type:Gear         | Price:  400 | Weight:  0.5 | Name: Leather jacket (deluxe)
+ID:  129 | Type:Gear         | Price:  200 | Weight:  0.5 | Name: Cheap fur coat
+ID:  130 | Type:Gear         | Price:  400 | Weight:  0.5 | Name: Fancy fur coat
+ID:  131 | Type:Gear         | Price:  500 | Weight:  0.5 | Name: Large coat
+ID:  132 | Type:Gear         | Price: 1200 | Weight:  0.5 | Name: Heavy coat
+ID:  133 | Type:Gear         | Price:  200 | Weight:  0.5 | Name: Jacket
+ID:  134 | Type:Gear         | Price:  500 | Weight:  0.5 | Name: Snobbish jacket
+ID:  135 | Type:Gear         | Price:  800 | Weight:  0.5 | Name: Elegant suit
+ID:  136 | Type:Gear         | Price: 1700 | Weight:  0.5 | Name: Luxury coat
+ID:  137 | Type:Gear         | Price:  250 | Weight:  0.5 | Name: Punk jacket
+ID:  138 | Type:Gear         | Price: 1200 | Weight:  0.5 | Name: Biker jacket
+ID:  139 | Type:Gear         | Price: 1000 | Weight:  0.5 | Name: Venerable coat
+ID:  140 | Type:Gear         | Price:   50 | Weight:  0.5 | Name: Awkward sweatpants
+ID:  141 | Type:Gear         | Price:   80 | Weight:  0.5 | Name: Rakish sweatpants
+ID:  142 | Type:Gear         | Price:  100 | Weight:  0.5 | Name: Sports pants
+ID:  143 | Type:Gear         | Price:  100 | Weight:  0.5 | Name: Ordinary jeans
+ID:  144 | Type:Gear         | Price:  200 | Weight:  0.5 | Name: Expensive jeans
+ID:  145 | Type:Gear         | Price:  300 | Weight:  0.5 | Name: Chic jeans
+ID:  146 | Type:Gear         | Price:  100 | Weight:  0.5 | Name: Sunday pants
+ID:  147 | Type:Gear         | Price:  200 | Weight:  0.5 | Name: Sunday pants (deluxe)
+ID:  148 | Type:Gear         | Price:  300 | Weight:  0.5 | Name: Suit pants
+ID:  149 | Type:Gear         | Price:  500 | Weight:  0.5 | Name: Elegant pants
+ID:  150 | Type:Gear         | Price:  300 | Weight:  0.5 | Name: Punk pants
+ID:  151 | Type:Gear         | Price:  400 | Weight:  0.5 | Name: Cargo pants
+ID:  152 | Type:Gear         | Price:  700 | Weight:  0.5 | Name: Cargo pants (deluxe)
+ID:  153 | Type:Gear         | Price:  900 | Weight:  0.5 | Name: Tuned cargo pants
+ID:  154 | Type:Gear         | Price:  350 | Weight:  0.5 | Name: Leather pants
+ID:  155 | Type:Gear         | Price:  350 | Weight:  0.5 | Name: Latex pants
+ID:  156 | Type:Gear         | Price:  400 | Weight:  0.5 | Name: Snobbish pants
+ID:  157 | Type:Gear         | Price: 1300 | Weight:  0.5 | Name: Biker pants
+ID:  158 | Type:Gear         | Price:   50 | Weight:  0.5 | Name: Baseball cap
+ID:  159 | Type:Gear         | Price:  200 | Weight:  0.5 | Name: Snapback Cap
+ID:  160 | Type:Gear         | Price:  300 | Weight:  0.5 | Name: Knitted cap
+ID:  161 | Type:Gear         | Price:  500 | Weight:  0.5 | Name: Knitted cap (deluxe)
+ID:  162 | Type:Gear         | Price:  300 | Weight:  0.5 | Name: Flat cap
+ID:  163 | Type:Gear         | Price: 1200 | Weight:  0.5 | Name: Ushanka
+ID:  164 | Type:Gear         | Price:  300 | Weight:  0.5 | Name: Cowboy hat
+ID:  165 | Type:Gear         | Price:  400 | Weight:  0.5 | Name: Cycling helmet
+ID:  166 | Type:Gear         | Price: 1200 | Weight:  0.5 | Name: Biker helmet
+ID:  167 | Type:Gear         | Price:  200 | Weight:  0.5 | Name: Scarf
+ID:  168 | Type:Gear         | Price:  400 | Weight:  0.5 | Name: Scarf (deluxe)
+ID:  169 | Type:Gear         | Price:  150 | Weight:  0.5 | Name: Punk scarf
+ID:  170 | Type:Gear         | Price:  150 | Weight:  0.5 | Name: Palestina scarf
+ID:  171 | Type:Gear         | Price:  300 | Weight:  0.5 | Name: Top hat
+ID:  172 | Type:Gear         | Price:  300 | Weight:  0.5 | Name: Santa's hat
+ID:  173 | Type:Gear         | Price:  200 | Weight:  0.5 | Name: Devil horns
+ID:  174 | Type:Gear         | Price:  300 | Weight:  0.5 | Name: Biker shades
+ID:  175 | Type:Gear         | Price:   50 | Weight:  0.5 | Name: Sneakers
+ID:  176 | Type:Gear         | Price:  100 | Weight:  0.5 | Name: Sneakers (deluxe)
+ID:  177 | Type:Gear         | Price:  400 | Weight:  0.5 | Name: Botas shoes
+ID:  178 | Type:Gear         | Price:  500 | Weight:  0.5 | Name: Botas shoes (deluxe)
+ID:  179 | Type:Gear         | Price:  500 | Weight:  0.5 | Name: Leather boots
+ID:  180 | Type:Gear         | Price:  700 | Weight:  0.5 | Name: Leather boots (deluxe)
+ID:  181 | Type:Gear         | Price:  500 | Weight:  0.5 | Name: Hiking boots
+ID:  182 | Type:Gear         | Price:  700 | Weight:  0.5 | Name: Work shoes
+ID:  183 | Type:Gear         | Price: 1000 | Weight:  0.5 | Name: Stylish work shoes
+ID:  184 | Type:Gear         | Price: 1500 | Weight:  0.5 | Name: Combat boots
+ID:  185 | Type:Gear         | Price:  500 | Weight:  0.5 | Name: Punk boots
+ID:  192 | Type:Gear         | Price: 1400 | Weight:  0.5 | Name: Biker boots
+ID:  186 | Type:Gear         | Price:  150 | Weight:  0.5 | Name: Rubber boots
+ID:  187 | Type:Gear         | Price:  200 | Weight:  0.5 | Name: High boots
+ID:  188 | Type:Gear         | Price:  200 | Weight:  0.5 | Name: Pumps
+ID:  189 | Type:Gear         | Price:  100 | Weight:  0.5 | Name: Sandals
+ID:  190 | Type:Gear         | Price:  200 | Weight:  0.5 | Name: Patent shoes
+ID:  191 | Type:Gear         | Price:  400 | Weight:  0.5 | Name: Patent shoes (deluxe)
+ID:  370 | Type:Gear         | Price: 2000 | Weight:  0.5 | Name: Bear coat
+ID:  387 | Type:Gear         | Price: 2000 | Weight:  0.5 | Name: Warm jacket
+ID:  388 | Type:Gear         | Price: 3000 | Weight:  0.5 | Name: Luxury jacket
+ID:  389 | Type:Gear         | Price: 4000 | Weight:  0.5 | Name: Expedition jacket
+ID:  390 | Type:Gear         | Price: 2000 | Weight:  0.5 | Name: Kickass pants
+ID:  391 | Type:Gear         | Price: 3000 | Weight:  0.5 | Name: Expedition pants
+ID:  392 | Type:Gear         | Price:  900 | Weight:  0.5 | Name: Designer Jacket (Deluxe)
+ID:  393 | Type:Gear         | Price:  900 | Weight:  0.5 | Name: Large coat (deluxe)
+ID:  487 | Type:Gear         | Price:  600 | Weight:  0.5 | Name: Black Metal Jacket
+ID:  488 | Type:Gear         | Price:  500 | Weight:  0.5 | Name: Black Metal Trousers
+ID:  489 | Type:Gear         | Price:  400 | Weight:  0.5 | Name: Black Metal Shoes
+ID:  343 | Type:Gear         | Price:   50 | Weight:  0.5 | Name: Makeshift poncho
+ID:  344 | Type:Gear         | Price:  100 | Weight:  0.5 | Name: Better poncho
+ID:  345 | Type:Gear         | Price:  300 | Weight:  0.5 | Name: Luxury poncho
+ID:  348 | Type:Gear         | Price:   50 | Weight:  0.5 | Name: Plastic garbage poncho
+ID:  318 | Type:Gear         | Price:  100 | Weight:  0.5 | Name: Shabby umbrella
+ID:  510 | Type:Gear         | Price:  500 | Weight:  0.3 | Name: Ski Mask
+ID:  518 | Type:Gear         | Price: 3000 | Weight:  0.3 | Name: Crazy's hat
+ID:  583 | Type:Gear         | Price: 1000 | Weight:  0.5 | Name: Dealer's coat
+ID:  584 | Type:Gear         | Price:  700 | Weight:  0.5 | Name: Friedrich's jacket
+ID:  585 | Type:Gear         | Price:  500 | Weight:  0.5 | Name: Friedrich's shoes
+ID:  586 | Type:Gear         | Price:  600 | Weight:  0.5 | Name: Friedrich's pants
+ID:  608 | Type:Gear         | Price:  700 | Weight:  0.5 | Name: Guzzler Pants
+ID:  609 | Type:Gear         | Price: 1300 | Weight:  0.5 | Name: Coat of a Legendary Guzzler
+ID:  610 | Type:Gear         | Price: 2500 | Weight:  0.5 | Name: Baron's Coat
+ID:  615 | Type:Gear         | Price: 4000 | Weight:  0.5 | Name: Patriot's Mantle
+ID:  616 | Type:Gear         | Price: 1000 | Weight:  0.5 | Name: Goth Robe
+ID:  640 | Type:Gear         | Price:   50 | Weight:  0.3 | Name: Face mask
+ID:  641 | Type:Gear         | Price: 1200 | Weight:  0.5 | Name: Hiking jacket
+ID:  642 | Type:Gear         | Price: 1000 | Weight:  0.5 | Name: Hiking pants
+ID:  643 | Type:Gear         | Price: 2000 | Weight:  0.5 | Name: Mountaineering jacket
+ID:  644 | Type:Gear         | Price: 1800 | Weight:  0.5 | Name: Mountaineering pants
+ID:  645 | Type:Gear         | Price: 1500 | Weight:  0.5 | Name: Hiking shoes
+ID:  658 | Type:Gear         | Price:  500 | Weight:  0.5 | Name: Work jacket
+ID:  659 | Type:Gear         | Price:  800 | Weight:  0.5 | Name: Cool guy jacket
+ID:  660 | Type:Gear         | Price: 1000 | Weight:  0.5 | Name: Parka
+ID:  661 | Type:Gear         | Price: 1500 | Weight:  0.5 | Name: Winter jacket
+ID:  662 | Type:Gear         | Price: 1200 | Weight:  0.5 | Name: Feather jacket
+ID:  663 | Type:Gear         | Price: 1200 | Weight:  0.5 | Name: Quilted jacket
+ID:  664 | Type:Gear         | Price: 2000 | Weight:  0.5 | Name: Leatherette jacket
+ID:  665 | Type:Gear         | Price: 1000 | Weight:  0.5 | Name: Outdoor jacket
+ID:  666 | Type:Gear         | Price:  600 | Weight:  0.5 | Name: Windbreaker Jacket
+ID:  667 | Type:Gear         | Price:  500 | Weight:  0.5 | Name: Modern Low Shoes
+ID:  668 | Type:Gear         | Price:  700 | Weight:  0.5 | Name: Ankle Shoes
+ID:  669 | Type:Gear         | Price:  500 | Weight:  0.5 | Name: Moccasins
+ID:  670 | Type:Gear         | Price:  500 | Weight:  0.5 | Name: High-heeled shoes
+ID:  671 | Type:Gear         | Price: 1000 | Weight:  0.5 | Name: Outdoor shoes
+ID:  672 | Type:Gear         | Price: 2000 | Weight:  0.5 | Name: Mountaineering shoes
+ID:  673 | Type:Gear         | Price:  800 | Weight:  0.5 | Name: Winter shoes
+ID:  674 | Type:Gear         | Price: 1000 | Weight:  0.5 | Name: Winter shoes (deluxe)
+ID:  675 | Type:Gear         | Price:  300 | Weight:  0.5 | Name: Slippers
+ID:  676 | Type:Gear         | Price:  500 | Weight:  0.5 | Name: Skate shoes
+ID:  677 | Type:Gear         | Price:  500 | Weight:  0.5 | Name: Running shoes
+ID:  678 | Type:Gear         | Price:  800 | Weight:  0.5 | Name: Running shoes (deluxe)
+ID:  679 | Type:Gear         | Price: 2000 | Weight:  0.5 | Name: Extravagant boots
+ID:   64 | Type:HideoutInterior | Price:  200 | Weight:  1.0 | Name: Metal Door 2x2
+ID:   65 | Type:HideoutInterior | Price:  200 | Weight:  1.0 | Name: Metal Roof 2x1
+ID:   66 | Type:HideoutInterior | Price:  200 | Weight:  1.0 | Name: Metal Roof 2x2
+ID:   67 | Type:HideoutInterior | Price:  200 | Weight:  1.0 | Name: Metal Roof 2x4
+ID:   68 | Type:HideoutInterior | Price:  150 | Weight:  1.0 | Name: Metal Wall 1x2
+ID:   69 | Type:HideoutInterior | Price:  100 | Weight:  1.0 | Name: Metal Wall 2x1
+ID:   70 | Type:HideoutInterior | Price:  150 | Weight:  1.0 | Name: Metal Wall 2x2
+ID:   71 | Type:HideoutInterior | Price:  100 | Weight:  1.0 | Name: Shoddy Door 2x2
+ID:   72 | Type:HideoutInterior | Price:  100 | Weight:  1.0 | Name: Shoddy Roof 2x1
+ID:   73 | Type:HideoutInterior | Price:  100 | Weight:  1.0 | Name: Shoddy Roof 2x2
+ID:   74 | Type:HideoutInterior | Price:  150 | Weight:  1.0 | Name: Shoddy Roof 2x4
+ID:   75 | Type:HideoutInterior | Price:  100 | Weight:  1.0 | Name: Shoddy Wall 1x2
+ID:   76 | Type:HideoutInterior | Price:  100 | Weight:  1.0 | Name: Shoddy Wall 2x1
+ID:   77 | Type:HideoutInterior | Price:  100 | Weight:  1.0 | Name: Shoddy Wall 2x2
+ID:   78 | Type:HideoutInterior | Price:  200 | Weight:  1.0 | Name: Tarp Door 2x2
+ID:   79 | Type:HideoutInterior | Price:  150 | Weight:  1.0 | Name: Tarp Roof 2x1
+ID:   80 | Type:HideoutInterior | Price:  200 | Weight:  1.0 | Name: Tarp Roof 2x2
+ID:   81 | Type:HideoutInterior | Price:  200 | Weight:  1.0 | Name: Tarp Roof 2x4
+ID:   82 | Type:HideoutInterior | Price:  150 | Weight:  1.0 | Name: Tarp Wall 1x2
+ID:   83 | Type:HideoutInterior | Price:  150 | Weight:  1.0 | Name: Tarp Wall 2x1
+ID:   84 | Type:HideoutInterior | Price:  200 | Weight:  1.0 | Name: Tarp Wall 2x2
+ID:   85 | Type:HideoutInterior | Price:  200 | Weight:  1.0 | Name: Wooden Door 2x2
+ID:   86 | Type:HideoutInterior | Price:  150 | Weight:  1.0 | Name: Wooden Roof 2x1
+ID:   87 | Type:HideoutInterior | Price:  200 | Weight:  1.0 | Name: Wooden Roof 2x2
+ID:   88 | Type:HideoutInterior | Price:  200 | Weight:  1.0 | Name: Wooden Roof 2x4
+ID:   89 | Type:HideoutInterior | Price:  150 | Weight:  1.0 | Name: Wooden Wall 1x2
+ID:   90 | Type:HideoutInterior | Price:  150 | Weight:  1.0 | Name: Wooden Wall 2x1
+ID:   91 | Type:HideoutInterior | Price:  200 | Weight:  1.0 | Name: Wooden Wall 2x2
+ID:  235 | Type:HideoutInterior | Price:  100 | Weight:  0.3 | Name: 
+ID:  225 | Type:HideoutInterior | Price:   50 | Weight:  0.3 | Name: Smoke
+ID:  252 | Type:HideoutInterior | Price:   70 | Weight:  1.0 | Name: Cool dagger
+ID:   93 | Type:HideoutInterior | Price:   40 | Weight:  0.3 | Name: Dirty Bottle
+ID:  215 | Type:HideoutInterior | Price:   40 | Weight:  0.3 | Name: Dirty bottle
+ID:  216 | Type:HideoutInterior | Price:   40 | Weight:  0.3 | Name: Dirty bottle
+ID:  268 | Type:HideoutInterior | Price:   40 | Weight:  0.3 | Name: Unlabeled Can
+ID:  269 | Type:HideoutInterior | Price:   40 | Weight:  0.3 | Name: Empty Can
+ID:  236 | Type:HideoutInterior | Price:   50 | Weight:  1.0 | Name: Basin
+ID:  232 | Type:HideoutInterior | Price:   90 | Weight:  1.0 | Name: Old radio
+ID:  270 | Type:HideoutInterior | Price:   40 | Weight:  1.0 | Name: Cinder block
+ID:  253 | Type:HideoutInterior | Price:   50 | Weight:  1.0 | Name: Moldy pillow
+ID:  254 | Type:HideoutInterior | Price:   50 | Weight:  1.0 | Name: Moldy pillow
+ID:  233 | Type:HideoutInterior | Price:   80 | Weight:  1.0 | Name: Vintage suitcase
+ID:  234 | Type:HideoutInterior | Price:   90 | Weight:  1.0 | Name: Living room lamp
+ID:  231 | Type:HideoutInterior | Price:  100 | Weight:  1.0 | Name: Old stove
+ID:  255 | Type:HideoutInterior | Price:   50 | Weight:  1.0 | Name: Torn tire
+ID:  271 | Type:HideoutInterior | Price:  100 | Weight:  1.0 | Name: Obsolete TV
+ID:  272 | Type:HideoutInterior | Price:  100 | Weight:  1.0 | Name: Obsolete TV
+ID:  274 | Type:HideoutInterior | Price:  100 | Weight:  1.0 | Name: Toilet
+ID:  273 | Type:HideoutInterior | Price:  300 | Weight:  1.0 | Name: Bathtub
+ID:  221 | Type:HideoutInterior | Price:  100 | Weight:  1.0 | Name: Footstool
+ID:  220 | Type:HideoutInterior | Price:  100 | Weight:  1.0 | Name: Fishing stool
+ID:  222 | Type:HideoutInterior | Price:  100 | Weight:  1.0 | Name: Messed up chair
+ID:  223 | Type:HideoutInterior | Price:  100 | Weight:  1.0 | Name: School chair
+ID:  284 | Type:HideoutInterior | Price:  100 | Weight:  1.0 | Name: Creaky chair
+ID:  406 | Type:HideoutInterior | Price:  100 | Weight:  1.0 | Name: Stool
+ID:  224 | Type:HideoutInterior | Price:  100 | Weight:  1.0 | Name: Barstool
+ID:  283 | Type:HideoutInterior | Price:  100 | Weight:  1.0 | Name: Sturdy chair
+ID:  404 | Type:HideoutInterior | Price:  100 | Weight:  1.0 | Name: Kitchen chair
+ID:  405 | Type:HideoutInterior | Price:  100 | Weight:  1.0 | Name: Kitchen chair
+ID:  407 | Type:HideoutInterior | Price:  100 | Weight:  1.0 | Name: Folding chair
+ID:  409 | Type:HideoutInterior | Price:  100 | Weight:  1.0 | Name: Office chair
+ID:  408 | Type:HideoutInterior | Price:  100 | Weight:  1.0 | Name: Beanbag chair
+ID:   92 | Type:HideoutInterior | Price:  200 | Weight:  1.0 | Name: Car seat
+ID:  217 | Type:HideoutInterior | Price:  250 | Weight:  1.0 | Name: Well-preserved armchair
+ID:  282 | Type:HideoutInterior | Price:  300 | Weight:  1.0 | Name: Nice armchair
+ID:  218 | Type:HideoutInterior | Price:  250 | Weight:  1.0 | Name: Old armchair
+ID:  372 | Type:HideoutInterior | Price:  300 | Weight:  1.0 | Name: Luxury armchair
+ID:  219 | Type:HideoutInterior | Price:  250 | Weight:  1.0 | Name: Comfortable armchair
+ID:  373 | Type:HideoutInterior | Price:  300 | Weight:  1.0 | Name: Antique armchair
+ID:  226 | Type:HideoutInterior | Price:  100 | Weight:  1.0 | Name: 
+ID:  249 | Type:HideoutInterior | Price:  300 | Weight:  1.0 | Name: Big mattress
+ID:  250 | Type:HideoutInterior | Price:  250 | Weight:  1.0 | Name: Small mattress
+ID:  259 | Type:HideoutInterior | Price:  100 | Weight:  1.0 | Name: Comfy Bedding
+ID:  374 | Type:HideoutInterior | Price:  100 | Weight:  1.0 | Name: Sunbed
+ID:  227 | Type:HideoutInterior | Price:  300 | Weight:  1.0 | Name: Fancy couch
+ID:  228 | Type:HideoutInterior | Price:  300 | Weight:  1.0 | Name: Antique sofa
+ID:  229 | Type:HideoutInterior | Price:  300 | Weight:  1.0 | Name: Well-preserved couch
+ID:  230 | Type:HideoutInterior | Price:  300 | Weight:  1.0 | Name: Diner seat
+ID:  237 | Type:HideoutInterior | Price:  300 | Weight:  1.0 | Name: Leather couch
+ID:  281 | Type:HideoutInterior | Price:  300 | Weight:  1.0 | Name: Nice couch
+ID:  379 | Type:HideoutInterior | Price:  100 | Weight:  1.0 | Name: Great couch
+ID:  248 | Type:HideoutInterior | Price:  300 | Weight:  1.0 | Name: Wobbly shelf
+ID:  239 | Type:HideoutInterior | Price:  300 | Weight:  1.0 | Name: Creaky coffee table
+ID:  278 | Type:HideoutInterior | Price:  300 | Weight:  1.0 | Name: Shabby cabinet
+ID:  240 | Type:HideoutInterior | Price:  300 | Weight:  1.0 | Name: Creaky dresser
+ID:  241 | Type:HideoutInterior | Price:  300 | Weight:  1.0 | Name: Creaky nightstand
+ID:  242 | Type:HideoutInterior | Price:  300 | Weight:  1.0 | Name: Creaky drawers
+ID:  243 | Type:HideoutInterior | Price:  300 | Weight:  1.0 | Name: Creaky furniture wall
+ID:  245 | Type:HideoutInterior | Price:  300 | Weight:  1.0 | Name: Vintage cupboard
+ID:  246 | Type:HideoutInterior | Price:  300 | Weight:  1.0 | Name: Vintage locker
+ID:  244 | Type:HideoutInterior | Price:  300 | Weight:  1.0 | Name: Well-preserved shoe cabinet
+ID:  279 | Type:HideoutInterior | Price:  300 | Weight:  1.0 | Name: Sturdy TV table
+ID:  410 | Type:HideoutInterior | Price:  100 | Weight:  1.0 | Name: Old commode
+ID:  247 | Type:HideoutInterior | Price:  300 | Weight:  1.0 | Name: Vintage TV table
+ID:  238 | Type:HideoutInterior | Price:  300 | Weight:  1.0 | Name: Furniture wall
+ID:  275 | Type:HideoutInterior | Price:  300 | Weight:  1.0 | Name: Creaky wardrobe
+ID:  251 | Type:HideoutInterior | Price:  100 | Weight:  1.0 | Name: 
+ID:  256 | Type:HideoutInterior | Price:  250 | Weight:  1.0 | Name: Makeshift bench
+ID:  257 | Type:HideoutInterior | Price:  100 | Weight:  1.0 | Name: Makeshift stool
+ID:  258 | Type:HideoutInterior | Price:  100 | Weight:  1.0 | Name: Makeshift stool
+ID:  260 | Type:HideoutInterior | Price:  100 | Weight:  1.0 | Name: Improvised table
+ID:  261 | Type:HideoutInterior | Price:  300 | Weight:  1.0 | Name: Creaky table
+ID:  262 | Type:HideoutInterior | Price:  300 | Weight:  1.0 | Name: Creaky writing table
+ID:  263 | Type:HideoutInterior | Price:  300 | Weight:  1.0 | Name: Well-preserved office table
+ID:  264 | Type:HideoutInterior | Price:  300 | Weight:  1.0 | Name: Great coffee table
+ID:  265 | Type:HideoutInterior | Price:  300 | Weight:  1.0 | Name: Sturdy table
+ID:  266 | Type:HideoutInterior | Price:  300 | Weight:  1.0 | Name: Garden table
+ID:  267 | Type:HideoutInterior | Price:  300 | Weight:  1.0 | Name: Luxurious dining table
+ID:  446 | Type:HideoutInterior | Price:  300 | Weight:  1.0 | Name: Round table
+ID:  276 | Type:HideoutInterior | Price:  100 | Weight:  1.0 | Name: 
+ID:  277 | Type:HideoutInterior | Price:  100 | Weight:  1.0 | Name: 
+ID:  280 | Type:HideoutInterior | Price:  100 | Weight:  1.0 | Name: 
+ID:  285 | Type:HideoutInterior | Price:  100 | Weight:  1.0 | Name: Private dump
+ID:  380 | Type:HideoutInterior | Price:  200 | Weight:  1.0 | Name: Water tank
+ID:  422 | Type:HideoutInterior | Price:  300 | Weight:  1.0 | Name: Science lab
+ID:  423 | Type:HideoutInterior | Price:  300 | Weight:  1.0 | Name: Arcade machine
+ID:  426 | Type:HideoutInterior | Price:  300 | Weight:  5.0 | Name: Anvil
+ID:  424 | Type:HideoutInterior | Price:  200 | Weight:  0.5 | Name: Blow-up Doll
+ID:  427 | Type:HideoutInterior | Price:  150 | Weight:  1.0 | Name: Barrel
+ID:  431 | Type:HideoutInterior | Price:  300 | Weight:  0.3 | Name: Teddy bear
+ID:  428 | Type:HideoutInterior | Price:  300 | Weight:  0.5 | Name: Tricycle
+ID:  429 | Type:HideoutInterior | Price:   80 | Weight:  0.3 | Name: Pile of books
+ID:  433 | Type:HideoutInterior | Price:  300 | Weight:  0.5 | Name: Rocking horse
+ID:  434 | Type:HideoutInterior | Price:  300 | Weight:  0.5 | Name: Garden gnome
+ID:  436 | Type:HideoutInterior | Price:  300 | Weight:  1.0 | Name: Storage trunk
+ID:  437 | Type:HideoutInterior | Price:  200 | Weight:  1.0 | Name: Whiteboard
+ID:  438 | Type:HideoutInterior | Price:  300 | Weight:  0.3 | Name: Bust
+ID:  439 | Type:HideoutInterior | Price:  200 | Weight:  0.3 | Name: Retro lamp
+ID:  440 | Type:HideoutInterior | Price:  300 | Weight:  1.0 | Name: Lion statue
+ID:  441 | Type:HideoutInterior | Price:  300 | Weight:  0.3 | Name: Computer
+ID:  442 | Type:HideoutInterior | Price:  240 | Weight:  0.3 | Name: Computer Screen
+ID:  444 | Type:HideoutInterior | Price:  240 | Weight:  0.3 | Name: Printer
+ID:  447 | Type:HideoutInterior | Price:  200 | Weight:  0.3 | Name: Toaster
+ID:  448 | Type:HideoutInterior | Price:  300 | Weight:  0.3 | Name: Weird whale
+ID:  449 | Type:HideoutInterior | Price:   80 | Weight:  0.3 | Name: Electric Kettle
+ID:  450 | Type:HideoutInterior | Price:  120 | Weight:  0.3 | Name: Vacuum Cleaner
+ID:  468 | Type:HideoutInterior | Price:  200 | Weight:  1.0 | Name: Propane tank
+ID:  476 | Type:HideoutInterior | Price:   70 | Weight:  0.5 | Name: Empty jerrycan
+ID:  471 | Type:HideoutInterior | Price:   80 | Weight:  0.3 | Name: Portable cooker
+ID:  470 | Type:HideoutInterior | Price:   60 | Weight:  0.3 | Name: Plastic crate
+ID:  472 | Type:HideoutInterior | Price:   80 | Weight:  0.3 | Name: Rusty pot
+ID:  443 | Type:HideoutInterior | Price:  400 | Weight:  1.0 | Name: Newish washing machine
+ID:  445 | Type:HideoutInterior | Price:  400 | Weight:  1.0 | Name: Newish kitchen stove
+ID:  473 | Type:HideoutInterior | Price:  200 | Weight:  1.0 | Name: Shopping cart
+ID:  425 | Type:HideoutInterior | Price:  400 | Weight:  1.0 | Name: Punching bag
+ID:  430 | Type:HideoutInterior | Price:  400 | Weight:  1.0 | Name: Campfire
+ID:  435 | Type:HideoutInterior | Price:  300 | Weight:  1.0 | Name: Garden swing chair
+ID:  432 | Type:HideoutInterior | Price:  100 | Weight:  1.0 | Name: Crib
+ID:  475 | Type:HideoutInterior | Price:  300 | Weight:  1.0 | Name: Coffin
+ID:  484 | Type:HideoutInterior | Price:  300 | Weight:  1.0 | Name: Shower
+ID:  421 | Type:HideoutInterior | Price:  400 | Weight:  1.0 | Name: Study
+ID:  420 | Type:HideoutInterior | Price:  300 | Weight:  1.0 | Name: Guardian
+ID:  418 | Type:HideoutInterior | Price:  400 | Weight:  1.0 | Name: Storage
+ID:  415 | Type:HideoutInterior | Price:  400 | Weight:  1.0 | Name: Christian altar
+ID:  474 | Type:HideoutInterior | Price:  400 | Weight:  1.0 | Name: Occult altar
+ID:  417 | Type:HideoutInterior | Price:  400 | Weight:  1.0 | Name: Laundromat
+ID:  411 | Type:HideoutInterior | Price:  400 | Weight:  1.0 | Name: Drinking lounge
+ID:  414 | Type:HideoutInterior | Price:  400 | Weight:  1.0 | Name: Field kitchen
+ID:  416 | Type:HideoutInterior | Price:  400 | Weight:  1.0 | Name: Weight bench
+ID:  412 | Type:HideoutInterior | Price:  400 | Weight:  1.0 | Name: Playpen
+ID:  413 | Type:HideoutInterior | Price:  400 | Weight:  1.0 | Name: IT department
+ID:  419 | Type:HideoutInterior | Price:  400 | Weight:  1.0 | Name: Throne
+ID:  469 | Type:HideoutInterior | Price:    0 | Weight:  1.0 | Name: 
+ID:  506 | Type:HideoutInterior | Price:  200 | Weight:  0.3 | Name: Candles
+ID:  507 | Type:HideoutInterior | Price:  300 | Weight:  0.3 | Name: Camp lamp
+ID:  580 | Type:HideoutInterior | Price:  800 | Weight:  1.0 | Name: Drug Lab
+ID:  330 | Type:Scrap        | Price:    5 | Weight:  0.1 | Name: Useless Junk
+ID:   22 | Type:Scrap        | Price:    5 | Weight:  0.1 | Name: Junk
+ID:  378 | Type:Scrap        | Price:   20 | Weight:  0.1 | Name: Useful junk
+ID:  402 | Type:Scrap        | Price:  100 | Weight:  0.1 | Name: Epic junk
+ID:   23 | Type:Scrap        | Price:    7 | Weight:  0.1 | Name: Old textiles
+ID:  209 | Type:Scrap        | Price:   50 | Weight:  0.1 | Name: Strange fabric
+ID:  315 | Type:Scrap        | Price:  100 | Weight:  0.1 | Name: Remarkable fabric
+ID:  403 | Type:Scrap        | Price:  100 | Weight:  0.1 | Name: Epic trash
+ID:  453 | Type:Scrap        | Price:   50 | Weight:  0.1 | Name: Broken toys
+ID:   25 | Type:Scrap        | Price:   10 | Weight:  0.1 | Name: Duct tape
+ID:   30 | Type:Scrap        | Price:   10 | Weight:  0.1 | Name: Superglue
+ID:   26 | Type:Scrap        | Price:   10 | Weight:  0.1 | Name: Electrical parts
+ID:   24 | Type:Scrap        | Price:   10 | Weight:  0.1 | Name: Nails
+ID:   32 | Type:Scrap        | Price:   10 | Weight:  0.3 | Name: Wooden planks
+ID:   27 | Type:Scrap        | Price:   10 | Weight:  0.3 | Name: Rope
+ID:   28 | Type:Scrap        | Price:   40 | Weight:  0.3 | Name: Binding wire
+ID:   31 | Type:Scrap        | Price:   50 | Weight:  0.3 | Name: Metal plate
+ID:   35 | Type:Scrap        | Price:   30 | Weight:  0.3 | Name: Tarp
+ID:   37 | Type:Scrap        | Price:   30 | Weight:  0.3 | Name: Polystyrene
+ID:   36 | Type:Scrap        | Price:   30 | Weight:  0.3 | Name: Asphalt plate
+ID:   21 | Type:Scrap        | Price:   10 | Weight:  0.3 | Name: Scrap iron
+ID:   29 | Type:Scrap        | Price:    0 | Weight:  0.3 | Name: 
+ID:   33 | Type:Scrap        | Price:    0 | Weight:  0.3 | Name: 
+ID:   34 | Type:Scrap        | Price:    5 | Weight:  0.3 | Name: 
+ID:  313 | Type:Scrap        | Price:   30 | Weight:  0.1 | Name: Tempera paints
+ID:  312 | Type:Scrap        | Price:   10 | Weight:  0.1 | Name: Interesting paper
+ID:  311 | Type:Scrap        | Price:   40 | Weight:  0.1 | Name: Personal drawing
+ID:  493 | Type:Scrap        | Price:  100 | Weight:  0.5 | Name: Scrap Metal
+ID:  494 | Type:Scrap        | Price:  120 | Weight:  0.5 | Name: Building Material
+ID:  495 | Type:Scrap        | Price:  150 | Weight:  0.0 | Name: Goods
+ID:   50 | Type:Scrap        | Price:   50 | Weight:  0.1 | Name: Flashlight
+ID:   51 | Type:Scrap        | Price:   50 | Weight:  0.1 | Name: Laser pointer
+ID:   38 | Type:Scrap        | Price:   20 | Weight:  0.3 | Name: Kettle (broken)
+ID:   39 | Type:HideoutInterior | Price:   80 | Weight:  0.3 | Name: Electric Kettle
+ID:   40 | Type:Scrap        | Price:   15 | Weight:  0.3 | Name: Keyboard (broken)
+ID:   41 | Type:Scrap        | Price:   60 | Weight:  0.3 | Name: Keyboard
+ID:   42 | Type:Scrap        | Price:   30 | Weight:  0.3 | Name: Transistor radio (broken)
+ID:   43 | Type:HideoutInterior | Price:   90 | Weight:  1.0 | Name: Old radio
+ID:   44 | Type:Scrap        | Price:   30 | Weight:  0.3 | Name: Vacuum cleaner (broken)
+ID:   45 | Type:HideoutInterior | Price:  120 | Weight:  0.3 | Name: Vacuum Cleaner
+ID:   46 | Type:Scrap        | Price:   15 | Weight:  0.3 | Name: Headphones (broken)
+ID:   47 | Type:Scrap        | Price:   60 | Weight:  0.3 | Name: Headphones
+ID:   48 | Type:Scrap        | Price:   15 | Weight:  0.1 | Name: Public transport ticket
+ID:   49 | Type:Scrap        | Price:   15 | Weight:  0.1 | Name: Condom
+ID:   52 | Type:Scrap        | Price:   30 | Weight:  0.3 | Name: Make-up
+ID:   53 | Type:Scrap        | Price:   20 | Weight:  0.3 | Name: Mirror
+ID:   54 | Type:Scrap        | Price:   15 | Weight:  0.3 | Name: Comb
+ID:   55 | Type:Scrap        | Price:  100 | Weight:  0.3 | Name: Ornate cigarette case
+ID:   56 | Type:Scrap        | Price:  100 | Weight:  0.3 | Name: Stylish lighter
+ID:   57 | Type:Scrap        | Price:  200 | Weight:  0.3 | Name: Vaporizer
+ID:   58 | Type:Scrap        | Price:  150 | Weight:  0.3 | Name: MP3 player
+ID:   59 | Type:Scrap        | Price:  100 | Weight:  0.3 | Name: Cheap jewelery
+ID:   60 | Type:Scrap        | Price:  300 | Weight:  0.3 | Name: Jewelery
+ID:   61 | Type:Scrap        | Price:   30 | Weight:  0.1 | Name: Meal voucher
+ID:   62 | Type:Scrap        | Price:  300 | Weight:  0.1 | Name: Concert ticket
+ID:  208 | Type:Scrap        | Price:   10 | Weight:  0.1 | Name: Lockpick
+ID:  376 | Type:Scrap        | Price:   20 | Weight:  0.1 | Name: Toilet paper
+ID:  377 | Type:Scrap        | Price:   50 | Weight:  0.1 | Name: Toilet paper deluxe
+ID:  483 | Type:Scrap        | Price:   15 | Weight:  0.1 | Name: Laundry detergent
+ID:  501 | Type:Scrap        | Price:    5 | Weight:  0.1 | Name: Chicken Bones
+ID:  485 | Type:Scrap        | Price:  150 | Weight:  0.3 | Name: Packaged chicken
+ID:  478 | Type:Scrap        | Price:   30 | Weight:  0.1 | Name: Picture of our Savior
+ID:  338 | Type:Scrap        | Price:   50 | Weight:  0.3 | Name: Map
+ID:  492 | Type:Scrap        | Price:   10 | Weight:  0.1 | Name: Advertisement Fliers
+ID:  286 | Type:Scrap        | Price:  200 | Weight:  0.3 | Name: A remarkable box
+ID:  287 | Type:Scrap        | Price:  500 | Weight:  0.3 | Name: A remarkable box (deluxe)
+ID:  305 | Type:Scrap        | Price:  400 | Weight:  0.3 | Name: Dead Cat
+ID:  384 | Type:Scrap        | Price:  400 | Weight:  0.1 | Name: Rat
+ID:  306 | Type:Scrap        | Price:  400 | Weight:  0.3 | Name: Dead bird
+ID:  500 | Type:Scrap        | Price:   50 | Weight:  0.1 | Name: Food Bag
+ID:  314 | Type:Scrap        | Price:  100 | Weight:  0.1 | Name: Carnation
+ID:  491 | Type:Scrap        | Price:  666 | Weight:  0.1 | Name: Dark shard
+ID:  326 | Type:Scrap        | Price:   20 | Weight:  0.3 | Name: The Savior
+ID:  327 | Type:Scrap        | Price:   20 | Weight:  0.3 | Name: Small book
+ID:  333 | Type:Scrap        | Price:    5 | Weight:  0.1 | Name: Newspaper
+ID:  328 | Type:Scrap        | Price:   20 | Weight:  0.3 | Name: Slim magazine
+ID:  339 | Type:Scrap        | Price:   40 | Weight:  0.1 | Name: Shevel magazine
+ID:  332 | Type:Scrap        | Price:   20 | Weight:  0.1 | Name: Bottle Opener
+ID:  337 | Type:Scrap        | Price:  200 | Weight:  0.1 | Name: Retro cup
+ID:  340 | Type:Scrap        | Price:    0 | Weight:  0.3 | Name: 
+ID:  350 | Type:Scrap        | Price:  100 | Weight:  0.3 | Name: Copper wire
+ID:  352 | Type:Scrap        | Price:    0 | Weight:  0.1 | Name: Coins
+ID:  353 | Type:Scrap        | Price:    0 | Weight:  0.1 | Name: Coins
+ID:  288 | Type:Scrap        | Price:    3 | Weight:  0.1 | Name: Used ticket
+ID:  368 | Type:Scrap        | Price:   10 | Weight:  0.1 | Name: Winning lottery ticket (10cr)
+ID:  365 | Type:Scrap        | Price:   20 | Weight:  0.1 | Name: Winning lottery ticket (20cr)
+ID:  366 | Type:Scrap        | Price:   30 | Weight:  0.1 | Name: Winning lottery ticket (30cr)
+ID:  336 | Type:Scrap        | Price:   50 | Weight:  0.1 | Name: Winning lottery ticket (50cr)
+ID:  299 | Type:Scrap        | Price:   80 | Weight:  0.1 | Name: Winning lottery ticket (80cr)
+ID:  335 | Type:Scrap        | Price:  300 | Weight:  0.1 | Name: Winning lottery ticket (300cr)
+ID:  367 | Type:Scrap        | Price:    0 | Weight:  0.3 | Name: 
+ID:  369 | Type:Scrap        | Price:    0 | Weight:  0.1 | Name: Coins
+ID:  371 | Type:Scrap        | Price:    0 | Weight:  0.1 | Name: Coins
+ID:   63 | Type:Scrap        | Price:    2 | Weight:  0.1 | Name: Returnable bottle
+ID:  395 | Type:Scrap        | Price:   30 | Weight:  0.1 | Name: Cool bottle
+ID:  396 | Type:Scrap        | Price:   40 | Weight:  0.1 | Name: Awesome bottle
+ID:  397 | Type:Scrap        | Price:    0 | Weight:  0.0 | Name: 
+ID:  341 | Type:Scrap        | Price:  200 | Weight:  0.3 | Name: Bicycle
+ID:  347 | Type:Scrap        | Price:  400 | Weight:  0.3 | Name: Fancy bicycle
+ID:  385 | Type:Scrap        | Price:    0 | Weight:  0.1 | Name: Raw meat
+ID:  479 | Type:Scrap        | Price:   50 | Weight:  0.3 | Name: Old dishes
+ID:  460 | Type:Scrap        | Price:   60 | Weight:  0.3 | Name: Broken lamp
+ID:  461 | Type:Scrap        | Price:   60 | Weight:  0.3 | Name: Old toaster
+ID:  462 | Type:Scrap        | Price:   60 | Weight:  0.3 | Name: Old portable cooker
+ID:  451 | Type:Scrap        | Price:  100 | Weight:  0.5 | Name: PC components
+ID:  463 | Type:Scrap        | Price:  100 | Weight:  0.3 | Name: Old printer
+ID:  452 | Type:Scrap        | Price:   80 | Weight:  0.5 | Name: Washing machine drum
+ID:  454 | Type:Scrap        | Price:  100 | Weight:  1.0 | Name: Old kitchen stove
+ID:  455 | Type:Scrap        | Price:  100 | Weight:  1.0 | Name: Old washing machine
+ID:  456 | Type:Scrap        | Price:  100 | Weight:  1.0 | Name: Tattered punching bag
+ID:  457 | Type:Scrap        | Price:  100 | Weight:  1.0 | Name: Arcade machine (broken)
+ID:  459 | Type:Scrap        | Price:   70 | Weight:  0.3 | Name: Tattered teddy bear
+ID:  458 | Type:Scrap        | Price:   70 | Weight:  0.3 | Name: "Retired" blow-up doll
+ID:  464 | Type:Scrap        | Price:   50 | Weight:  0.3 | Name: Tattered mattress
+ID:  477 | Type:Scrap        | Price:  200 | Weight:  0.5 | Name: Cow skull
+ID:  386 | Type:Scrap        | Price:  500 | Weight:  0.0 | Name: Memorial ring
+ID:  399 | Type:Scrap        | Price:    0 | Weight:  0.1 | Name: Couch spring
+ID:  400 | Type:Scrap        | Price:    0 | Weight:  0.0 | Name: Maisner's Radio (broken)
+ID:  401 | Type:Scrap        | Price:    0 | Weight:  0.0 | Name: Maisner's Radio
+ID:  497 | Type:Scrap        | Price:    0 | Weight:  0.0 | Name: Licence for Handling Food
+ID:  505 | Type:Scrap        | Price:    0 | Weight:  0.0 | Name: Licence for Handling Food (Stolen)
+ID:  498 | Type:Scrap        | Price:    0 | Weight:  0.0 | Name: GP's Stamp
+ID:  499 | Type:Scrap        | Price:    0 | Weight:  0.3 | Name: Amazing Pot
+ID:  502 | Type:Scrap        | Price:    0 | Weight:  1.0 | Name: Quality potatoes
+ID:  503 | Type:Scrap        | Price:    0 | Weight:  0.5 | Name: Gypsy's Scrap Metal
+ID:  504 | Type:Scrap        | Price:    0 | Weight:  0.1 | Name: Fancy meat
+ID:  508 | Type:Scrap        | Price:    0 | Weight:  0.1 | Name: Henry's wallet
+ID:  509 | Type:Scrap        | Price:    0 | Weight:  0.1 | Name: Dinner for two
+ID:  511 | Type:Scrap        | Price:  230 | Weight:  0.1 | Name: Winning lottery ticket
+ID:  512 | Type:Scrap        | Price:    0 | Weight:  0.1 | Name: Love letter
+ID:  514 | Type:Scrap        | Price:    0 | Weight:  0.1 | Name: Collar
+ID:  515 | Type:Scrap        | Price:    0 | Weight:  0.5 | Name: Sartre
+ID:  516 | Type:Scrap        | Price:    0 | Weight:  0.1 | Name: Toxic alcohol
+ID:  517 | Type:Scrap        | Price:    0 | Weight:  0.1 | Name: Legendary whiskey
+ID:  519 | Type:Scrap        | Price:    0 | Weight:  0.1 | Name: Peppe's Mead
+ID:  550 | Type:Scrap        | Price:    0 | Weight:  0.1 | Name: Legendary scotch
+ID:  551 | Type:Scrap        | Price:    0 | Weight:  0.5 | Name: Strecker's bag
+ID:  552 | Type:Scrap        | Price:    0 | Weight:  0.1 | Name: Strecker's notes
+ID:  553 | Type:Scrap        | Price:    0 | Weight:  0.1 | Name: Strecker's folder
+ID:  554 | Type:Scrap        | Price:    0 | Weight:  0.1 | Name: Memory card
+ID:  561 | Type:Scrap        | Price:    0 | Weight:  0.1 | Name: Golden goblet
+ID:  562 | Type:Scrap        | Price:    0 | Weight:  0.1 | Name: Golden cross
+ID:  563 | Type:Scrap        | Price:    0 | Weight:  0.1 | Name: Golden candelabra
+ID:  564 | Type:Scrap        | Price:    0 | Weight:  0.1 | Name: Exemplary find
+ID:  565 | Type:Scrap        | Price:    0 | Weight:  0.1 | Name: Legendary irish whiskey
+ID:  566 | Type:Scrap        | Price:  300 | Weight:  0.3 | Name: Car Stereo
+ID:  567 | Type:Scrap        | Price:  600 | Weight:  0.3 | Name: Antique clock
+ID:  568 | Type:Scrap        | Price:    0 | Weight:  0.1 | Name: Mazal's lighter
+ID:  569 | Type:Scrap        | Price:    0 | Weight:  0.1 | Name: Exorcism Potion
+ID:  570 | Type:Scrap        | Price:    0 | Weight:  0.1 | Name: Delivery for Burian
+ID:  571 | Type:Scrap        | Price:    0 | Weight:  0.1 | Name: Murder Knife (Supposedly)
+ID:  572 | Type:Scrap        | Price:    0 | Weight:  0.1 | Name: Oysteroid
+ID:  573 | Type:Scrap        | Price:    0 | Weight:  0.1 | Name: Antidote
+ID:  575 | Type:Scrap        | Price:    0 | Weight:  0.1 | Name: Gilded engagement ring
+ID:  578 | Type:Scrap        | Price:    0 | Weight:  0.1 | Name: Holy water
+ID:  587 | Type:Scrap        | Price:    0 | Weight:  0.1 | Name: Rat poison
+ID:  588 | Type:Scrap        | Price:    0 | Weight:  0.3 | Name: Dead raccoon
+ID:  589 | Type:Scrap        | Price:    0 | Weight:  0.1 | Name: Empty Kraken injector
+ID:  590 | Type:Scrap        | Price:    0 | Weight:  0.3 | Name: Moiser's package
+ID:  591 | Type:Scrap        | Price:    0 | Weight:  0.3 | Name: Charger
+ID:  592 | Type:Scrap        | Price:    0 | Weight:  0.1 | Name: Tiger Balm
+ID:  594 | Type:Scrap        | Price:    0 | Weight:  0.1 | Name: Key to sewers
+ID:  595 | Type:Scrap        | Price:    0 | Weight:  0.3 | Name: On-brand Electronics
+ID:  596 | Type:Scrap        | Price:    0 | Weight:  0.5 | Name: Interesting antiques
+ID:  597 | Type:Scrap        | Price:    0 | Weight:  0.3 | Name: Ski mask
+ID:  599 | Type:Scrap        | Price:    0 | Weight:  0.1 | Name: Kvapil's spare key
+ID:  600 | Type:Scrap        | Price:    0 | Weight:  0.1 | Name: Photo of the suspect
+ID:  602 | Type:Scrap        | Price:    0 | Weight:  0.5 | Name: A bag with a gun
+ID:  603 | Type:Scrap        | Price: 2000 | Weight:  0.3 | Name: Police Medal
+ID:  604 | Type:Scrap        | Price: 4000 | Weight:  0.3 | Name: Greater Police Medal
+ID:  605 | Type:Scrap        | Price:    0 | Weight:  0.3 | Name: Padlock
+ID:  606 | Type:Scrap        | Price:    0 | Weight:  0.1 | Name: Injection Needles
+ID:  607 | Type:Scrap        | Price:    0 | Weight:  0.3 | Name: Car stereo (deluxe)
+ID:  613 | Type:Scrap        | Price:    0 | Weight:  0.1 | Name: Key to the Crypt
+ID:  614 | Type:Scrap        | Price:    0 | Weight:  0.1 | Name: Unknown Substance
+ID:  618 | Type:Scrap        | Price:    0 | Weight:  0.1 | Name: Contact Card
+ID:  622 | Type:Scrap        | Price:  300 | Weight:  0.1 | Name: Meth Deluxe for Sale
+ID:  623 | Type:Scrap        | Price:    0 | Weight:  1.0 | Name: Bicycle Sparta
+ID:  624 | Type:Scrap        | Price:    0 | Weight:  1.0 | Name: Old bicycle
+ID:  626 | Type:Scrap        | Price:    0 | Weight:  1.0 | Name: Pizza Order
+ID:  628 | Type:Scrap        | Price:    0 | Weight:  0.1 | Name: Baron's key
+ID:  629 | Type:Scrap        | Price:    0 | Weight:  0.5 | Name: Pickaxe
+ID:  647 | Type:Scrap        | Price:    0 | Weight:  0.1 | Name: Rabbi's key
+ID:  648 | Type:Scrap        | Price:    0 | Weight:  0.3 | Name: Muller's camera
+ID:  115 | Type:SleepingBag  | Price:   30 | Weight:  0.5 | Name: Cardboard bedding
+ID:  116 | Type:SleepingBag  | Price:   50 | Weight:  0.5 | Name: Makeshift bedding
+ID:  295 | Type:SleepingBag  | Price:  100 | Weight:  0.5 | Name: Comfy Bedding
+ID:  316 | Type:SleepingBag  | Price:  500 | Weight:  0.5 | Name: Luxury bedding
+ID:  317 | Type:SleepingBag  | Price:    0 | Weight:  0.1 | Name: 
+ID:  375 | Type:SleepingBag  | Price:    0 | Weight:  0.1 | Name: 
+ID:  513 | Type:Weapon       | Price:   30 | Weight:  0.1 | Name: Newspaper club
+ID:  520 | Type:Weapon       | Price:   60 | Weight:  0.3 | Name: Simple club
+ID:  521 | Type:Weapon       | Price:  180 | Weight:  0.3 | Name: Lame thingamajig
+ID:  522 | Type:Weapon       | Price:  220 | Weight:  0.3 | Name: Okay thingamajig
+ID:  523 | Type:Weapon       | Price:  260 | Weight:  0.3 | Name: Brutal thingamajig
+ID:  524 | Type:Weapon       | Price:  350 | Weight:  0.3 | Name: Mighty thingamajig
+ID:  525 | Type:Weapon       | Price:   10 | Weight:  0.1 | Name: Bottle
+ID:  526 | Type:Weapon       | Price:  110 | Weight:  0.3 | Name: Plunger
+ID:  527 | Type:Weapon       | Price:  110 | Weight:  0.3 | Name: Cutting board
+ID:  528 | Type:Weapon       | Price:  110 | Weight:  0.3 | Name: Saucepan
+ID:  529 | Type:Weapon       | Price:  110 | Weight:  0.3 | Name: Toilet seat
+ID:  530 | Type:Weapon       | Price:  220 | Weight:  0.3 | Name: Shovel
+ID:  531 | Type:Weapon       | Price:  220 | Weight:  0.3 | Name: Broom
+ID:  532 | Type:Weapon       | Price:  220 | Weight:  0.3 | Name: Rolling pin
+ID:  533 | Type:Weapon       | Price:  350 | Weight:  0.3 | Name: Frying pan
+ID:  534 | Type:Weapon       | Price:  350 | Weight:  0.3 | Name: Adjustable wrench
+ID:  535 | Type:Weapon       | Price:  350 | Weight:  0.3 | Name: Hammer
+ID:  536 | Type:Weapon       | Price:  380 | Weight:  0.3 | Name: Police baton
+ID:  537 | Type:Weapon       | Price:  380 | Weight:  0.3 | Name: Gas pipe
+ID:  538 | Type:Weapon       | Price:  380 | Weight:  0.3 | Name: Crowbar
+ID:  539 | Type:Weapon       | Price:  400 | Weight:  0.3 | Name: Fire extinguisher
+ID:  540 | Type:Weapon       | Price:  400 | Weight:  0.3 | Name: Entrenching tool
+ID:  541 | Type:Weapon       | Price:  400 | Weight:  0.3 | Name: Baseball bat
+ID:  542 | Type:Weapon       | Price:  430 | Weight:  0.3 | Name: Badass baseball bat
+ID:  543 | Type:Weapon       | Price:  600 | Weight:  0.3 | Name: Sledgehammer
+ID:  544 | Type:Weapon       | Price:  600 | Weight:  0.3 | Name: Fire axe
+ID:  545 | Type:Weapon       | Price:  600 | Weight:  0.3 | Name: Machete
+ID:  546 | Type:Weapon       | Price:  600 | Weight:  0.3 | Name: Weaponized gnome
+ID:  547 | Type:Weapon       | Price:10000 | Weight:  0.3 | Name: Scepter of Dionysus
+ID:  548 | Type:Weapon       | Price:10000 | Weight:  0.3 | Name: Scepter of Dionysus (Charged)
+ID:  549 | Type:Weapon       | Price:    0 | Weight:  0.0 | Name: 
+ID:  621 | Type:Weapon       | Price:  300 | Weight:  0.3 | Name: Crisper
+ID:60000 | Type:Bag          | Price: 5000 | Weight:  1.0 | Name: Hobo Trolley
+ID:60001 | Type:Gear         | Price: 1000 | Weight:  0.5 | Name: Sick Shrek Hoodie
