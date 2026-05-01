@@ -9,9 +9,10 @@
 | name | string | REQUIRED | Display name |
 | description | string | REQUIRED | Item description |
 | baseItem | int | REQUIRED | Vanilla item ID to clone |
-| type | string | REQUIRED | consumable/gear/weapon |
+| type | string | REQUIRED | gear/consumable will fallback to baseItem type if not defined| 
 | price | int | 0 | Buy/sell value |
 | weight | float | 0.1 | Item weight |
+| category|string|jacket|hat/shoes/pants/jacket|
 
 ### Inventory
 | Property | Type | Default |
