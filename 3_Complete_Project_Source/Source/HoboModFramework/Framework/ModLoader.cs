@@ -152,6 +152,9 @@ namespace HoboModPlugin.Framework
         [JsonProperty("dependencies")]
         public List<string> Dependencies { get; set; } = new();
 
+        [JsonProperty("vanillaUnlocks")]
+        public List<VanillaRecipeUnlockDefinition> VanillaUnlocks { get; set; } = new();
+
         // Runtime
         [JsonIgnore]
         public string FolderPath { get; set; } = "";
@@ -541,6 +544,13 @@ namespace HoboModPlugin.Framework
 
         [JsonProperty("count")]
         public int Count { get; set; } = 1;
+    }
+
+    //Defines a vanilla game recipe to auto unlock by giving the result ItemID as input
+    public class VanillaRecipeUnlockDefinition
+    {
+        [JsonProperty("ResultItemId")]
+        public uint ResultItemId { get; set; }
     }
 
     /// <summary>

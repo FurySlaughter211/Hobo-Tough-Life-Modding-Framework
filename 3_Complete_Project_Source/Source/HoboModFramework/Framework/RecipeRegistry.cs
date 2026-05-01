@@ -22,6 +22,8 @@ namespace HoboModPlugin.Framework
         
         // Static lookup for result counts - enables multi-item crafting via patches
         private static readonly Dictionary<uint, int> _recipeResultCounts = new();
+
+        private readonly List<uint> _vanillaUnlockTargets = new();
         
         /// <summary>
         /// Get the result count for a mod recipe. Returns 1 if not a mod recipe or count not set.
@@ -66,6 +68,22 @@ namespace HoboModPlugin.Framework
                 }
             }
         }
+
+       public void LoadVanillaUnlockRecipesFromMod(ModManifest mod)
+        {
+            if (mod.VanillaUnlocks == null || mod.VanillaUnlocks.Count == 0) return;
+
+            foreach (var def in mod.VanillaUnlocks)
+            {
+                if (!_vanillaUnlockTargets.Contains(def.ResultItemId))
+                {
+                    _vanillaUnlockTargets.Add(def.ResultItemId);
+                    _log.LogInfo($"Queued vanilla unlock for item ID {def.ResultItemId}");
+                }
+            }
+        }
+
+
         
         private void RegisterRecipe(ModManifest mod, RecipeDefinition definition)
         {
@@ -224,7 +242,21 @@ namespace HoboModPlugin.Framework
                 // The game handles result count differently (through item stacking)
                 
                 // Parse bench type
-                customRecipe.myBench = ParseBenchType(definition.Bench);
+                var benchType = ParseBenchType(definition.Bench);
+                customRecipe.myBench = benchType;
+                
+                if (benchType != Recipe.BenchType.Nothing)
+                {
+                    var reqBench = new RecipeRequireBench();
+                    reqBench.benchType = benchType;
+                    customRecipe.RequireBench = reqBench;
+                    customRecipe.requireBench = reqBench;
+                }
+                else
+                {
+                    customRecipe.RequireBench = null;
+                    customRecipe.requireBench = null;
+                }
                 
                 // Set primary ingredients
                 var reqList = new Il2CppSystem.Collections.Generic.List<RecipeRequireItem>();
@@ -387,10 +419,34 @@ namespace HoboModPlugin.Framework
                             player.AddRecipe(registered.GameRecipe, false, false);
                             _log.LogInfo($"  Auto-unlocked recipe: {registered.Definition.Id}");
                         }
+                        catch {}
+                    }
+                }
+            }
+            
+            // --- Vanilla recipe unlocks ---
+            var allRecipes = RecipeDatabase.recipes;
+            if (allRecipes != null && _vanillaUnlockTargets.Count > 0)
+            {
+                foreach (var targetItemId in _vanillaUnlockTargets)
+                {
+                    foreach (var kvp in allRecipes)
+                    {
+                        var recipe = kvp.Value;
+                        if (recipe == null || recipe.resultItemId != targetItemId) continue;
+                        if (player.HasRecipe(recipe.id)) continue;
+
+                        try
+                        {
+                            player.AddRecipe(recipe, false, false);
+                            _log.LogInfo($"  Auto-unlocked vanilla recipe ID {recipe.id} (item: {targetItemId})");
+                        }
                         catch { }
                     }
                 }
             }
+            
+            
         }
         
         /// <summary>
@@ -403,6 +459,7 @@ namespace HoboModPlugin.Framework
             _recipes.Clear();
             _recipeResultCounts.Clear();
             _idToStringId.Clear();
+            _vanillaUnlockTargets.Clear();
             // Note: No ID counter reset needed - we use deterministic hashes now
             _log.LogInfo("[RecipeRegistry] Registry cleared.");
         }

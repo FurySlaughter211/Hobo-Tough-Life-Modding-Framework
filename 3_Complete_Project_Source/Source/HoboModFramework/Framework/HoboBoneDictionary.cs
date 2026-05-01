@@ -3,17 +3,7 @@ using UnityEngine;
 
 namespace HoboModPlugin.Framework
 {
-    /// <summary>
-    /// The Rosetta Stone: Maps Unity's standard HumanBodyBones enum to the exact
-    /// string names used by Hobo Tough Life's native Vanilla skeleton.
-    ///
-    /// These names were harvested live from the game's bone hierarchy via Unity Explorer
-    /// and confirmed against the Ghidra-decompiled Game.HumanoidAnimator boneStructure array.
-    ///
-    /// This dictionary is the bridge that allows ANY standard Humanoid asset (Mixamo,
-    /// Daz, custom rigs) to be remapped onto the Vanilla Hobo skeleton without needing
-    /// the modder to rename their bones manually.
-    /// </summary>
+
     public static class HoboBoneDictionary
     {
         /// <summary>

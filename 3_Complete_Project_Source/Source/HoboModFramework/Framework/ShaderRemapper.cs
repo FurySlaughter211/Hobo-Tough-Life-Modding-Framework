@@ -4,24 +4,7 @@ using UnityEngine;
 
 namespace HoboModPlugin.Framework
 {
-    /// <summary>
-    /// ShaderRemapper v3 — Native Shader Injection
-    ///
-    /// DEFINITIVE FIX for the invisible skinned mesh bug.
-    ///
-    /// ROOT CAUSE (confirmed via live memory dump):
-    ///   Hobo: Tough Life uses a proprietary shader called "Render Pipeline/DitherLit"
-    ///   for all animated NPC characters. Unity's IL2CPP build permanently stripped
-    ///   bone-skinning math from the generic "Standard" shader because the developers
-    ///   never used it on SkinnedMeshRenderers. Any AssetBundle material requesting
-    ///   "Standard" collapses all vertices to (0,0,0), making the mesh invisible.
-    ///
-    /// SOLUTION:
-    ///   Clone the vanilla NPC's live Material (which carries DitherLit with full
-    ///   skinning math), inject the modder's albedo texture into _MainTex, and
-    ///   replace _PBRMap with a dynamically generated 1×1 neutral texture to
-    ///   prevent the sweaty/clay appearance caused by Hobo's packed PBR channel.
-    /// </summary>
+   
     public static class ShaderRemapper
     {
         private static ManualLogSource _log;

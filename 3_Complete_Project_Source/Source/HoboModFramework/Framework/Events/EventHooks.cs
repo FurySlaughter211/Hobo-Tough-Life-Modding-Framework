@@ -201,7 +201,7 @@ namespace HoboModPlugin.Framework.Events
                 {
                     Plugin.Framework.ClearAndReloadContent();
                     Plugin.Framework.InjectContent();
-                    Plugin.Framework.InjectQuests();
+                    // Plugin.Framework.InjectQuests();
                 }
                 
                 ModEvents.FireGameLoaded(new GameEventArgs());

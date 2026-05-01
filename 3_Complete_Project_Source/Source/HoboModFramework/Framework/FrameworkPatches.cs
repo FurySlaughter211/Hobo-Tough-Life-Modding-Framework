@@ -434,6 +434,7 @@ namespace HoboModPlugin.Framework
             return null;
         }
         
+        /*
         // Quest injection via GetFMQ_Map - intercept when game looks up our quest
         [HarmonyPatch(typeof(HBT_QuestDatabase), "GetFMQ_Map")]
         public static class QuestDatabase_GetFMQ_Map_Patch
@@ -900,6 +901,7 @@ namespace HoboModPlugin.Framework
                 return true;
             }
         }
+        */
         
         // ==================== Custom Bag Patches ====================
         
