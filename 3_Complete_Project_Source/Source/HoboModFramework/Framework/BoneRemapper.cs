@@ -6,27 +6,22 @@ using UnityEngine;
 namespace HoboModPlugin.Framework
 {
     /// <summary>
-    /// The Universal Rosetta Stone BoneRemapper.
+    /// Remaps the bones of a custom SkinnedMeshRenderer to the vanilla game's skeleton.
     ///
-    /// TRANSLATION PIPELINE (runs once per SMR per NPC spawn):
-    ///   Pass 1 — Avatar Rosetta Stone:
-    ///     For each custom bone, ask the custom Animator's Avatar which HumanBodyBones
-    ///     identity that bone corresponds to. Then look up the Vanilla bone string name
-    ///     from HoboBoneDictionary and slot in the live Vanilla bone.
+    /// The remapping happens in three passes:
+    ///   Pass 1 — Avatar Mapping:
+    ///     Uses the custom Animator's Humanoid Avatar to match custom bones to Unity's
+    ///     HumanBodyBones. It then finds the corresponding vanilla bone and uses that.
     ///
-    ///   Pass 2 — String Match Bypass (fallback):
-    ///     If the Avatar bake failed (e.g. modular mesh, too few bones to qualify as
-    ///     Humanoid), directly compare the custom bone name against every bone in the
-    ///     Vanilla index. If the name matches, slot in that Vanilla bone.
-    ///     This handles models that deliberately use Vanilla bone names, or partial rigs.
+    ///   Pass 2 — Direct Name Matching:
+    ///     If Avatar mapping fails, it checks if the custom bone's name exactly matches
+    ///     any bone in the vanilla skeleton.
     ///
-    ///   Pass 3 — Last resort:
-    ///     If neither pass finds a match (cape bones, hair bones etc.), the original
-    ///     INSTANTIATED custom bone is kept. This requires the caller to instantiate
-    ///     the custom skeleton into the scene before calling this method.
+    ///   Pass 3 — Fallback:
+    ///     If no vanilla bone matches, it keeps the custom bone. This is useful for
+    ///     extra bones like capes, hair, or weapons that the vanilla game doesn't have.
     ///
-    /// PERFORMANCE: O(n) algorithm. Runs exactly ONCE per SMR per NPC spawn. Zero per-
-    ///              frame cost after the array is set on the SkinnedMeshRenderer.
+    /// Note: This runs once per SkinnedMeshRenderer when it is instantiated.
     /// </summary>
     public static class BoneRemapper
     {
@@ -106,7 +101,7 @@ namespace HoboModPlugin.Framework
                 var customBone = instancedCustomBones[i];
                 Transform resolved = null;
 
-                // Pass 1 — Avatar Rosetta Stone
+                // Pass 1 — Map via Unity Avatar (matches custom bone to vanilla bone by body part)
                 if (customBone != null &&
                     customBoneToHumanBone.TryGetValue(customBone, out var humanBone) &&
                     HoboBoneDictionary.BoneNameMap.TryGetValue(humanBone, out var vanillaName) &&
@@ -116,7 +111,7 @@ namespace HoboModPlugin.Framework
                     avatarMapped++;
                 }
 
-                // Pass 2 — String-Match Bypass (for failed Avatars / modular meshes)
+                // Pass 2 — Direct Name Matching (fallback if the bone isn't mapped in the Avatar)
                 if (resolved == null && customBone != null)
                 {
                     if (vanillaByName.TryGetValue(customBone.name, out var directMatch))
@@ -126,7 +121,7 @@ namespace HoboModPlugin.Framework
                     }
                 }
 
-                // Pass 3 — Keep the instantiated custom bone (capes, hair, extras)
+                // Pass 3 — Keep the original custom bone (used for extra bones like capes or hair)
                 if (resolved == null)
                 {
                     resolved = customBone;

@@ -5,6 +5,8 @@ using BepInEx.Logging;
 using HarmonyLib;
 using UnityEngine;
 using Game.AI;
+using Il2CppInterop.Runtime;
+
 
 namespace HoboModPlugin.Framework
 {
@@ -215,6 +217,12 @@ namespace HoboModPlugin.Framework
                     VanillaSMR = vanillaSMR,
                     CustomRoot  = customRoot,
                 };
+                var AnimationManager = new AnimationManager();
+                AnimationManager.Initialize(_log, "Idle", customAnimator);
+
+
+
+
 
                 _log?.LogInfo($"[SkinnedMeshHijack] SUCCESS: Assembled {pieceCount} piece(s) on {__instance.gameObject.name}");
             }

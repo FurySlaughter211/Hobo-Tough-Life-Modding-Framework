@@ -20,7 +20,6 @@ namespace HoboModPlugin.Framework
         public ItemRegistry ItemRegistry { get; private set; }
         public RecipeRegistry RecipeRegistry { get; private set; }
         public EffectHandler EffectHandler { get; private set; }
-        public QuestRegistry QuestRegistry { get; private set; }
 
         private bool _initialized = false;
 
@@ -34,7 +33,6 @@ namespace HoboModPlugin.Framework
             ItemRegistry = new ItemRegistry(log);
             RecipeRegistry = new RecipeRegistry(log, ItemRegistry);
             EffectHandler = new EffectHandler(log, ItemRegistry);
-            QuestRegistry = new QuestRegistry(log);
 
             // Initialize patches with references
             FrameworkPatches.Initialize(log, ItemRegistry, EffectHandler, RecipeRegistry);
@@ -87,13 +85,13 @@ namespace HoboModPlugin.Framework
             {
                 ItemRegistry.LoadItemsFromMod(mod);
                 RecipeRegistry.LoadRecipesFromMod(mod);
-                QuestRegistry.LoadQuestsFromMod(mod);
                 LoadAssetOverridesFromMod(mod);
                 LoadModelOverridesFromMod(mod);
                 LoadCustomObjectsFromMod(mod);
                 LoadAvatarOverridesFromMod(mod);
                 SpawnTableInjector.LoadLootFromFolder(mod);
                 StaticObjectManager.LoadPlacementsFromMod(mod.FolderPath, mod.Id);
+                RecipeRegistry.LoadVanillaUnlockRecipesFromMod(mod);
             }
 
 
@@ -376,7 +374,6 @@ namespace HoboModPlugin.Framework
             // Clear all registries
             ItemRegistry.Clear();
             RecipeRegistry.Clear();
-            QuestRegistry.Clear();
             SpawnTableInjector.Clear();
 
             // Re-load definitions from mod files
@@ -384,17 +381,11 @@ namespace HoboModPlugin.Framework
             {
                 ItemRegistry.LoadItemsFromMod(mod);
                 RecipeRegistry.LoadRecipesFromMod(mod);
-                QuestRegistry.LoadQuestsFromMod(mod);
                 SpawnTableInjector.LoadLootFromFolder(mod);
+                RecipeRegistry.LoadVanillaUnlockRecipesFromMod(mod);
             }
 
             _log.LogInfo("=== HoboModFramework: Registries cleared and reloaded ===");
-        }
-
-        public void InjectQuests()
-        {
-            _log.LogInfo("=== HoboModFramework: Injecting Quests ===");
-            QuestRegistry.InjectAllQuests();
         }
 
         /// <summary>
