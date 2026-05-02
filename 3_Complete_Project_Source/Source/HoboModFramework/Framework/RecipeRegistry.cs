@@ -254,8 +254,11 @@ namespace HoboModPlugin.Framework
                 }
                 else
                 {
-                    customRecipe.RequireBench = null;
-                    customRecipe.requireBench = null;
+                    var emptyBench = new RecipeRequireBench();
+                    
+                    emptyBench.benchType = Recipe.BenchType.Nothing;
+                    customRecipe.RequireBench = emptyBench;
+                    customRecipe.requireBench = emptyBench;
                 }
                 
                 // Set primary ingredients

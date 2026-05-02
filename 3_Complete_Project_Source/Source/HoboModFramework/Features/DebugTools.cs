@@ -440,6 +440,8 @@ namespace HoboModPlugin.Features
             }
         }
 
+      
+
         /// <summary>
         /// Get and log player information
         /// </summary>
