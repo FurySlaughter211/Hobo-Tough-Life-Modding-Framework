@@ -1,0 +1,89 @@
+name: 1. Manual Stable Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version tag (e.g., v1.0.0)'
+        required: true
+        default: 'v1.0.0'
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x'
+
+    - name: Download Build Dependencies (Google Drive)
+      run: |
+        # Ensure the lib directory exists inside the top-level folder
+        mkdir -p "3_Complete_Project_Source/Source/HoboModFramework/lib/"
+        
+        # 1. Use a variable for the ID
+        FILE_ID="${{ secrets.LIB_FILE_ID }}"
+        
+        echo "Starting download for ID prefix: ${FILE_ID:0:4}..."
+        
+        # 2. Attempt to get a confirmation token (mimicking a browser)
+        CONFIRM=$(curl -sc /tmp/gdrive_cookie "https://drive.google.com/uc?export=download&id=${FILE_ID}" -A "Mozilla/5.0" | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1/p')
+        
+        # 3. Download the file using the token (if any) or the direct ID
+        if [ -z "$CONFIRM" ]; then
+          echo "Small file detected or direct download allowed..."
+          curl -L -A "Mozilla/5.0" -b /tmp/gdrive_cookie "https://drive.google.com/uc?export=download&id=${FILE_ID}" -o lib.zip
+        else
+          echo "Large file/Virus scan warning detected. Using confirmation token..."
+          curl -L -A "Mozilla/5.0" -b /tmp/gdrive_cookie "https://drive.google.com/uc?export=download&confirm=${CONFIRM}&id=${FILE_ID}" -o lib.zip
+        fi
+        
+        # 4. Security check: Make sure we actually got a zip file
+        if ! file lib.zip | grep -q "Zip archive"; then
+          echo "ERROR: lib.zip is not a valid zip file."
+          echo "Debug - First 100 characters of the downloaded file:"
+          head -c 100 lib.zip
+          echo ""
+          exit 1
+        fi
+        
+        # 5. Unzip directly into the framework's lib folder
+        unzip -o lib.zip -d "3_Complete_Project_Source/Source/HoboModFramework/lib/"
+        rm lib.zip
+
+    - name: Build Project
+      run: dotnet build "3_Complete_Project_Source/Source/HoboModFramework/HoboModPlugin.csproj" --configuration Release
+
+    - name: Package Files for Release
+      run: |
+        mkdir release_package
+        
+        # Copy the main plugin DLL and its dependencies
+        cp 3_Complete_Project_Source/Source/HoboModFramework/bin/Release/*/HoboModPlugin.dll release_package/
+        cp 3_Complete_Project_Source/Source/HoboModFramework/bin/Release/*/Newtonsoft.Json.dll release_package/
+        
+        # Copy documentation
+        cp Installation_Guide.md release_package/
+        
+        # Copy the modding resources folder recursively
+        cp -r 3_Complete_Project_Source/Source/HoboModFramework/modding_resources release_package/
+        
+        # Zip everything up
+        cd release_package
+        zip -r ../HoboModdingFramework-${{ github.event.inputs.version }}.zip ./*
+
+    - name: Publish GitHub Release
+      uses: softprops/action-gh-release@v2
+      with:
+        tag_name: ${{ github.event.inputs.version }}
+        name: Release ${{ github.event.inputs.version }}
+        files: HoboModdingFramework-${{ github.event.inputs.version }}.zip
+        draft: false
+        prerelease: false
