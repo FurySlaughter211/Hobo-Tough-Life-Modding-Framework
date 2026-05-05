@@ -58,6 +58,15 @@ jobs:
         unzip -o lib.zip -d "3_Complete_Project_Source/Source/HoboModFramework/lib/"
         rm lib.zip
 
+    - name: Update Plugin Version
+      run: |
+        VERSION_FILE="3_Complete_Project_Source/Source/HoboModFramework/Plugin.cs"
+        RAW_VERSION="${{ github.event.inputs.version }}"
+        CLEAN_VERSION=$(echo "$RAW_VERSION" | sed 's/^v//')
+        echo "Modifying $VERSION_FILE to set PLUGIN_VERSION to $CLEAN_VERSION"
+        sed -i "s/public const string PLUGIN_VERSION = \".*\";/public const string PLUGIN_VERSION = \"$CLEAN_VERSION\";/" "$VERSION_FILE"
+        grep "public const string PLUGIN_VERSION" "$VERSION_FILE"
+
     - name: Build Project
       run: dotnet build "3_Complete_Project_Source/Source/HoboModFramework/HoboModPlugin.csproj" --configuration Release
 
