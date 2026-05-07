@@ -1,0 +1,171 @@
+# Hobo Tough Life — Modding Framework Guide
+
+In this guide I'm gonna lead you through the creation of mods using my Framework.
+
+Together we're gonna create our own item, a recipe that we can use to craft it, and let it seamlessly fit into the world by letting it spawn naturally in the trash of Praslav.
+
+> If you don't know how to code don't worry, I focused on making this as easy and accessible as possible. All you will need to do is do some folder management and write a few JSON files (basically just `.txt` files with fancy formatting). My code will handle the rest.
+
+> [!NOTE]
+> To get the correct setup I advise you to follow the installation guide I wrote. It is on my Github too.
+
+---
+
+## Folder Structure
+
+Before we dive into writing the files, let's talk about the folder management. There are some simple rules to follow for this to work:
+
+1. The mod folder needs to be in the `HoboMods` folder you created following the installation guide. You can name it whatever you want.
+
+2. As general good practice you should make one folder that contains all the other folders you will need.
+
+3. In that top folder it is very important to create a file named `mod.json`. We will fill it out later but it is crucial so the Framework detects the mod.
+
+4. Besides that `mod.json` file you will put the other folders that will contain the JSON files. They need specific names — I will name them later when we get to them. Just remember to strictly follow the naming.
+
+---
+
+## Creating the Item
+
+Alright, I already mentioned that we will create an item together. That item will be a fedora so our hobo can feel fancy for once.
+
+### Step 1 — Fill Out `mod.json`
+
+The first step is to fill out the `mod.json` file you created earlier. In case you don't know how to even create these, just create a `.txt` file and rename it to `mod.json`. The file type will change to JSON then.
+
+The `mod.json` is fairly simple:
+
+```json
+{
+    "id": "snobbish_fedora_mod",        // Here you define what ID your mod should have. It really doesn't matter what ID you choose.
+    "name": "Snobbish Fedora Mod",      // This is the name of the mod. Very similar to the id so again, just name it whatever.
+    "version": "1.0.0",                 // This simply determines which version your mod is on. It also doesn't matter what you put here. It is just there so people can see if they're on the correct version of the mod.
+    "description": "This mod will add a fedora item to the game!"  // This adds a description to the mod. Also doesn't matter what you put here.
+}
+```
+
+You can do more stuff here but I want to keep it simple for now. I will address additional options later.
+
+---
+
+### Step 2 — Create the Item JSON
+
+Your next step is to create the folder for the item JSON file you will create. So in the same folder as `mod.json`, create a new folder called `items`.
+
+This folder can contain multiple item JSON files but for now we will just make one.
+
+Inside of that folder, create a JSON file for the mod. You can name it however you like but I will name it `snobbish_fedora.json`. Let's now fill out that file:
+
+```json
+{
+    "id": "snobbish_fedora",        // Your item ID. Don't get confused by it here demanding a string while vanilla items have a number as an ID. I turn this string ID into a number with an algorithm later. You don't have to do anything for that to happen though.
+    "type": "gear",                 // This defines what type of item this is. In our case we want something equippable so it's gear.
+    "icon": "assets/snobbish_fedora.png",  // This lets you set your item icon. For this to work you will need to later create a folder named "assets" and drop a PNG with the exact same name stated here in there. We'll do that together later.
+    "category": "hat",              // This sets the gear category. Because we don't want to wear our hat as shoes we have to name it hat.
+    "baseItem": 158,                // Here you define what item your custom item will copy from. The Framework copies a baseItem's properties so it is more stable. Just choose one that has the same category as the item you want to create. In this case it's the Baseball Cap. You can find the Item IDs in the ItemDump on my Github.
+    "name": "Snobbish Fedora",      // This is the name that will get displayed later.
+    "description": "Look at you, Mr. Monopoly! Now all you need is a monocle, a cane, and a place to sleep tonight.",  // This is the item's description that will get displayed later.
+    "price": 150,                   // Sets the item's price.
+    "weight": 0.5,                  // Sets the item's weight.
+    "sellable": true,               // Determines if the item is sellable. We gave it a price so it only makes sense that you could sell it.
+    "notForFire": false,            // Determines if you could use this item to fuel a fire. "false" here means that you CAN burn it.
+    "firerate": 50,                 // Sets how long the item can fuel the fire.
+    "buffetGame": true,             // This determines if your item will trigger the little minigame when found in the trash. It's a good item so I thought why not?
+    "buffetDifficulty": 1,          // This sets the difficulty of the minigame. 0 is easy, 1 is middle and 2 is hard.
+    "isStockable": false,           // With this you determine if you can stack your item. For gear you should always set this to false because the game gets confused if you try to stack it.
+    "warmResistance": 5,            // This gives the item 5 Warm Resistance. It's the stat that prevents you from freezing.
+    "wetResistance": 8,             // This gives the item 8 Wet Resistance. It's the stat that keeps you dry.
+    // What you put in "stats" here are the stats that are next to your durability bar. While the stats above are the ones untouched by it.
+    "stats": [
+        {"type": "Charism", "value": 8},
+        {"type": "Charism", "value": 5},
+        {"type": "wetResistance", "value": 7}
+    ]
+    // CRITICAL: The game always expects you to put 3 values here.
+}
+```
+
+There is more stuff you can configure but I'll put them in a list later. This is everything I want to give the item for now.
+
+---
+
+### Step 3 — Set Up Loot Spawning
+
+Now we want to make the item able to spawn in containers. For that you need to go to the top folder again and create a folder called `loot`. In there, create another JSON file called however you want. I called it `snobbish_fedora_loot.json`:
+
+```json
+[
+  {
+    "TableID": "Popelnik",       // Here you define what container this should be able to spawn in. Problem is that the containers are in Czech and it's hard to get a list of them, so until I've done that we will just use this which is the ash tray. Surely someone forgot their hat on the ash tray.
+    "ItemID": "snobbish_fedora", // This defines what item you want to add to the spawn pool. So just use the same ID you gave your item earlier.
+    "Amount": 1,                 // This determines how many should spawn. 2 would spawn a stack of two if you find it. I recommend doing 1 for gear though because of the stacking problem.
+    "DropChance": 100,           // This sets how high the drop chance is. This is not a percentile number but much rather a weight. 100 is pretty high though so you will probably find it pretty fast, which is nice for testing.
+    "PricePercent": 100          // Determines for how much of the item's price you can sell this if you looted it from somewhere.
+  },
+
+  // If you want your item to be able to spawn in multiple containers then you will have to just write the above again but with a different TableID. So:
+
+  {
+    "TableID": "Some other container",  // This is not a real container but you get the idea.
+    "ItemID": "snobbish_fedora",
+    "Amount": 1,
+    "DropChance": 10,            // Feel free to change values here too. Different containers can drop this item with different chances.
+    "PricePercent": 100
+  }
+]
+```
+
+---
+
+### Step 4 — Add a Custom Icon
+
+If you want your item to have its own unique look you can give it its own icon. Maybe you've already set a path for the item sprite earlier in the item configuration. If you didn't, do that now.
+
+You will need to create a new folder in the top folder named `assets`.
+
+Then you need to make your item sprite. I'm going to be super lazy here and use AI for the picture (forgive me but I'm not an artist). Then you will need to cut out the background from the picture — I'll just use Adobe's free website for that.
+
+Then name it exactly what you named it in the `"icon"` configuration earlier and drop it in the `assets` folder.
+
+---
+
+### Step 5 — Create a Recipe
+
+Now let's give our hobo the ability to craft the hat themselves by creating a recipe for the item.
+
+Go to the top folder again and create a folder called `recipes` there. In that folder create a new JSON file. The name is irrelevant again but I'll use `snobbish_fedora_recipe.json`:
+
+```json
+{
+    "id": "snobbish_fedora_recipe",   // This will be the recipe ID. Just name it whatever.
+    "result": "snobbish_fedora",      // This is what comes out of the recipe. So this expects the item ID. If you want the result to be a vanilla item you will need to use its numeric ID but you still need to put it in quotation marks.
+    "resultCount": 1,                 // Determines how many will come out.
+    "name": "Snobbish Fedora",        // Determines the displayed recipe name. I think the vanilla game always names this the same as the item name but you can make it differ if you want.
+    "bench": "normal",                // Here you can set the bench this recipe requires to craft. Options are: "none" (no bench required), "normal" (the normal crafting bench in the hideout), "kitchen", and "druglab".
+    // Here you will put the ingredients required for the recipe.
+    // The game expects an integer here (a normal number). So if you want to have a modded item be the ingredient of a recipe you will need to use its already converted hash ID, which you will see in the log.
+    // So this ID which you will see in the log: [Info   :HoboModFramework]     Injected: snobbish_fedora (ID: 192794)
+    // (I'm gonna fix that but that's how it is for now)
+    "ingredients": [
+        {"item": 315, "count": 3},
+        {"item": 37,  "count": 1},
+        {"item": 28,  "count": 1},
+        {"item": 30,  "count": 2}
+    ]
+}
+```
+
+---
+
+## Testing
+
+Now you can go test! For now you will need to create a new world because otherwise the recipes don't get auto-unlocked. I will fix that soon though.
+
+
+## Ressources
+
+You can find the modding ressources in the same folder as this guide. There you can see what stuff you can do. (Not yet, will post them soon tho)
+
+## Ending words
+
+This does't cover everything the Framework can do but it gives you a solid base to create your own things. When other features become more stable and developed I will update this guide.

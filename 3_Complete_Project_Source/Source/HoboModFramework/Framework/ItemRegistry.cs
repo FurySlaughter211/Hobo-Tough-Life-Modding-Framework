@@ -5,6 +5,7 @@ using BepInEx.Logging;
 using Core.Strings;
 using Game;
 using UnityEngine;
+using Newtonsoft.Json.Linq;
 
 namespace HoboModPlugin.Framework
 {
@@ -204,12 +205,16 @@ namespace HoboModPlugin.Framework
                 // === PHASE 3: Modify Existing Items ===
                 if (definition.IsModify && definition.TargetItemId > 0)
                 {
-                    ModifyExistingItem(definition);
+                    ModifyExistingItem(registered);
                     return;
                 }
 
                 // Skip if already injected
-                if (items.ContainsKey(registered.NumericId)) return;
+                if (items.ContainsKey(registered.NumericId))
+                {
+                    registered.GameItem = items[registered.NumericId];
+                    return;
+                }
 
                 // === FIX: Determine clone source ID ===
                 // For gear/weapon/bag types, if baseItem is default (1) but referenceItemId is set,
@@ -662,55 +667,192 @@ namespace HoboModPlugin.Framework
         /// <summary>
         /// Modify an existing vanilla item (isModify feature)
         /// </summary>
-        private void ModifyExistingItem(ItemDefinition definition)
+        private void ModifyExistingItem(RegisteredItem registered)
         {
-            var items = ItemDatabase.items;
+           var items = ItemDatabase.items; 
+           var definition = registered.Definition;
 
-            if (!items.ContainsKey(definition.TargetItemId))
+           if(!items.ContainsKey(definition.TargetItemId))
             {
-                _log.LogWarning($"    [isModify] Target item {definition.TargetItemId} not found");
+                _log.LogWarning($"[isModify]Target Item {definition.TargetItemId} not found in ItemDatabase");
                 return;
             }
 
             var targetItem = items[definition.TargetItemId];
-
-            // Apply non-default values only
-            if (definition.Price.HasValue) targetItem.price = definition.Price.Value;
-            if (definition.Weight != 0.1f) targetItem.weight = definition.Weight;
-            if (definition.RareColor != 0) targetItem.rareColor = definition.RareColor;
-            targetItem.sellable = definition.Sellable;
-            targetItem.notForFire = definition.NotForFire;
-            if (definition.SoundType != 0) targetItem.soundType = (Game.BaseItem.ESoundType)definition.SoundType;
-            if (definition.Firerate != 0) targetItem.firerate = definition.Firerate;
-
-            // Copy icon if referenceItemId specified
-            if (definition.ReferenceItemId > 0 && items.ContainsKey(definition.ReferenceItemId))
+           
+            var itemsFolder = Path.Combine(registered.Mod.FolderPath, "items");
+            
+            var jsonFiles = Directory.GetFiles(itemsFolder, "*.json");
+            
+            JObject rawJson = null;
+            
+            foreach (var file in jsonFiles)
             {
-                var refItem = items[definition.ReferenceItemId];
-                if (refItem.icon != null)
+             var text = File.ReadAllText(file);
+             
+             var candidate = JObject.Parse(text);
+             
+             if (candidate.GetValue("TargetItemId",StringComparison.OrdinalIgnoreCase)?.Value<uint>() == definition.TargetItemId)
+             {
+                 rawJson = candidate;
+                 break;
+             }
+            }
+            
+            if (rawJson == null)
+            {
+               _log.LogWarning($"[isModify] Could not find source JSON for item '{definition.TargetItemId}'");
+               return;
+            
+            }
+
+          // Only apply fields if the modder explicitly wrote them in the JSON
+            if (rawJson.ContainsKey("price"))              targetItem.price            = definition.Price ?? 0;
+            if (rawJson.ContainsKey("weight"))             targetItem.weight           = definition.Weight;
+            if (rawJson.ContainsKey("rareColor"))          targetItem.rareColor        = definition.RareColor;
+            if (rawJson.ContainsKey("sellable"))           targetItem.sellable         = definition.Sellable;
+            if (rawJson.ContainsKey("notForFire"))         targetItem.notForFire       = definition.NotForFire;
+            if (rawJson.ContainsKey("soundType"))          targetItem.soundType        = (Game.BaseItem.ESoundType)definition.SoundType;
+            if (rawJson.ContainsKey("firerate"))           targetItem.firerate         = definition.Firerate;
+            if (rawJson.ContainsKey("isStockable"))        targetItem.isStockable      = definition.IsStockable;
+            if (rawJson.ContainsKey("actualStockCount"))   targetItem.actualStockCount = definition.ActualStockCount;
+            if (rawJson.ContainsKey("isForHotSlot"))       targetItem.isForHotSlot     = definition.IsForHotSlot;
+            if (rawJson.ContainsKey("isStealable"))        targetItem.isStealable      = definition.IsStealable;
+            if (rawJson.ContainsKey("heavyItem"))          targetItem.heavyItem        = definition.HeavyItem;
+            if (rawJson.ContainsKey("hardItem"))           targetItem.hardItem         = definition.HardItem;
+            if (rawJson.ContainsKey("spawnDay"))           targetItem.spawnDay         = definition.SpawnDay;
+            if (rawJson.ContainsKey("isPermanent"))        targetItem.isPermanent      = definition.IsPermanent;
+            if (rawJson.ContainsKey("salvageTableId"))     targetItem.salvageTableID   = definition.SalvageTableId;
+            if (rawJson.ContainsKey("buyBackTime"))        targetItem.buyBackTime      = definition.BuyBackTime;
+
+
+            var strings = StringsManager.strings_items?.translatedInt;
+            if (strings != null)
+            {
+                if (rawJson.ContainsKey("name") && !string.IsNullOrEmpty(definition.Name))
+                    {strings[targetItem.TitleKey] = definition.Name;}
+
+                if (rawJson.ContainsKey("description") && !string.IsNullOrEmpty(definition.Description))
+                    {strings[targetItem.DescriptionKey] = definition.Description;}
+            }
+
+            if (rawJson.ContainsKey("hint") && !string.IsNullOrEmpty(definition.Hint) && Enum.TryParse<Game.BaseItem.EHint>(definition.Hint, true, out var hintValue))
+            {
+              targetItem.hint = hintValue;
+            }
+
+            if (rawJson.ContainsKey("subCategory") && !string.IsNullOrEmpty(definition.SubCategory) &&
+              Enum.TryParse<Game.BaseItem.ESubCategory>(definition.SubCategory, true, out var subCat))
+            {  
+                targetItem.subCategory = subCat;
+            }
+
+            //  Icon override
+
+            if (rawJson.ContainsKey("icon") && !string.IsNullOrEmpty(definition.Icon))
+            {
+                // Custom .png icon from mod folder
+                var customIcon = LoadIcon(registered);
+                if (customIcon != null)
+                   {targetItem.icon = customIcon;
+                    targetItem._icon = customIcon;
+                   _log.LogInfo($"[isModify] Icon loaded for Item: {definition.TargetItemId}");}
+            }
+            else if (rawJson.ContainsKey("referenceItemId") && definition.ReferenceItemId > 0 && items.ContainsKey(definition.ReferenceItemId))     
+            {
+              //  "Steal" vanilla icon from another item
+              var refItem = items[definition.ReferenceItemId];
+              if (refItem.icon != null)
                 {
-                    targetItem.icon = refItem.icon;
-                    targetItem._icon = refItem._icon;
+                   targetItem.icon  = refItem.icon;
+                   targetItem._icon = refItem._icon;
                 }
             }
 
-            _log.LogInfo($"    [isModify] Patched vanilla item ID {definition.TargetItemId}");
 
-            // [DIAG-MODIFY] Log the state of the target after modification
+            
+            //  Gear handling
             var gearTarget = targetItem.TryCast<Gear>();
             if (gearTarget != null)
             {
-                int paramCount = gearTarget.parameterChanges?.Count ?? 0;
-                int defStatCount = definition.Stats?.Count ?? 0;
-                _log.LogInfo($"[DIAG-MODIFY] '{definition.Id}': Target {definition.TargetItemId} has parameterChanges={paramCount}. JSON defines {defStatCount} stats. {(defStatCount > 0 && paramCount == 0 ? "⚠ STATS NOT APPLIED" : "OK")}");
+              if (rawJson.ContainsKey("category") && !string.IsNullOrEmpty(definition.Category))
+                 {gearTarget.category = ParseGearCategory(definition.Category);}
+
+              if (rawJson.ContainsKey("warmResistance"))       gearTarget.warmResistance       = definition.WarmResistance;
+              if (rawJson.ContainsKey("wetResistance"))         gearTarget.wetResistance        = definition.WetResistance;
+              if (rawJson.ContainsKey("durabilityResistance"))  gearTarget.durabilityResistance = definition.DurabilityResistance;
+
+              if (definition.Stats != null && definition.Stats.Count > 0)
+              {
+                    foreach (var statDef in definition.Stats)
+                    {
+                        var parsedType = ParseStatType(statDef.Type);
+                        if (parsedType == null) continue;
+
+                        bool found = false;
+                        foreach (var existing in gearTarget.parameterChanges)
+                        {
+                            if (existing.influencedParameterType == parsedType.Value)
+                            {
+                                existing.value = statDef.Value;
+                                found = true;
+                                break;
+                            }
+                        }
+                        if (!found)
+                          {
+                               gearTarget.parameterChanges.Add(new Gear.ParameterChange
+                                {
+                                influencedParameterType = parsedType.Value,
+                                value = statDef.Value
+                             });
+                           }
+                    }  
+               }
             }
+
+            //  Consumable handling
+
             var consumTarget = targetItem.TryCast<Consumable>();
-            if (consumTarget != null)
+            if(consumTarget != null)
             {
-                int paramCount = consumTarget.parameterChanges?.Count ?? 0;
-                int defStatCount = definition.StatChanges?.Count ?? 0;
-                _log.LogInfo($"[DIAG-MODIFY] '{definition.Id}': Target {definition.TargetItemId} has parameterChanges={paramCount}. JSON defines {defStatCount} statChanges. {(defStatCount > 0 && paramCount == 0 ? "⚠ STATS NOT APPLIED" : "OK")}");
+                if(definition.StatChanges != null && definition.StatChanges.Count > 0)
+                {
+                    foreach(var changeDef in definition.StatChanges)
+                    {
+                        var parsedType = ParseStatType(changeDef.Stat);
+                        if(parsedType == null) continue;
+
+                        bool found = false;
+
+                        foreach (var existing in consumTarget.parameterChanges)
+                        {
+                            if(existing.influencedParameterType == parsedType.Value)
+                            {
+                                existing.normalValue = (float)changeDef.Value;
+                                existing.isAddictedValue = (float)changeDef.AddictedValue;
+                                found = true;
+                                break;
+                            }
+                        }
+
+                        if(!found)
+                        {
+                            consumTarget.parameterChanges.Add(new Consumable.ParameterChange(parsedType.Value, changeDef.Value, changeDef.AddictedValue));
+                        }
+
+                
+                    }
+                    
+                }
+            
+
+             if (rawJson.ContainsKey("addictionType") && !string.IsNullOrEmpty(definition.AddictionType) && Enum.TryParse<CharacterAddiction.TypeAddiction>(definition.AddictionType, true, out var addiction))
+                {
+                    consumTarget.typeAddiction = addiction;
+                }
             }
+
         }
 
         /// <summary>

@@ -167,7 +167,10 @@ namespace HoboModPlugin.Framework
                 var recipes = RecipeDatabase.recipes;
                 
                 // Skip if already injected
-                if (recipes.ContainsKey(registered.NumericId)) return;
+                if (recipes.ContainsKey(registered.NumericId))
+                {   registered.GameRecipe = recipes[registered.NumericId];
+                    return;
+                }
                 
                 // Find a VANILLA Item-type recipe to clone (id < VANILLA_ID_CEILING)
                 // This prevents mod recipes from contaminating each other's data
@@ -413,17 +416,24 @@ namespace HoboModPlugin.Framework
             {
                 var registered = entry.Value;
                 // Use Definition.AutoUnlock (persists) instead of PendingUnlock flag (gets cleared)
-                if (registered.Definition.AutoUnlock && registered.GameRecipe != null)
+                if (registered.Definition.AutoUnlock && registered.GameRecipe != null) 
                 {
-                    if (!player.HasRecipe(registered.NumericId))
+                    try
                     {
-                        try
+                        if (!player.HasRecipe(registered.NumericId))
                         {
+                            _log.LogInfo($"  Is in Global database? {RecipeDatabase.recipes.ContainsKey(registered.NumericId)}"); 
+
                             player.AddRecipe(registered.GameRecipe, false, false);
-                            _log.LogInfo($"  Auto-unlocked recipe: {registered.Definition.Id}");
+                            _log.LogInfo($"  Auto-unlocked recipe: {registered.Definition.Id}, {registered.NumericId}, {player.HasRecipe(registered.NumericId)}"); //Debug
                         }
-                        catch {}
-                    }
+                    } 
+                        catch  (System.Exception ex) {_log.LogError($"Failed to auto-unlock recipe {registered.Definition.Id}: {ex.Message}");} //debug
+                    
+                }
+                else
+                {
+                    _log.LogWarning($"AutoUnlock failed. Are there any registered recipes?: {registered.GameRecipe != null}");
                 }
             }
             

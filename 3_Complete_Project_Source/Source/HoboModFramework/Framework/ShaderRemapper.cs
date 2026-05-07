@@ -20,7 +20,7 @@ namespace HoboModPlugin.Framework
         public static void Initialize(ManualLogSource log)
         {
             _log = log;
-            _log?.LogInfo("[ShaderRemapper] Native shader injection system ready.");
+            //_log?.LogInfo("[ShaderRemapper] Native shader injection system ready.");
         }
 
         /// <summary>
@@ -44,7 +44,7 @@ namespace HoboModPlugin.Framework
             // Lazily create the neutral PBR map once
             EnsureNeutralPBR();
 
-            _log?.LogInfo($"[ShaderRemapper] Fixing materials on '{obj.name}' using donor shader '{vanillaDonor.shader.name}'");
+            //_log?.LogInfo($"[ShaderRemapper] Fixing materials on '{obj.name}' using donor shader '{vanillaDonor.shader.name}'");
 
             int fixedCount = 0;
 
@@ -74,8 +74,8 @@ namespace HoboModPlugin.Framework
                 }
             }
 
-            if (fixedCount > 0)
-                _log?.LogInfo($"[ShaderRemapper] SUCCESS: Fixed {fixedCount} material(s) on '{obj.name}' → native DitherLit shader");
+           // if (fixedCount > 0)
+             //   _log?.LogInfo($"[ShaderRemapper] SUCCESS: Fixed {fixedCount} material(s) on '{obj.name}' → native DitherLit shader");
 
             return fixedCount;
         }
@@ -100,7 +100,7 @@ namespace HoboModPlugin.Framework
             if (modderAlbedo != null && fixedMat.HasProperty("_MainTex"))
             {
                 fixedMat.SetTexture("_MainTex", modderAlbedo);
-                _log?.LogInfo($"[ShaderRemapper]   Injected modder albedo into _MainTex ({modderAlbedo.name})");
+                //_log?.LogInfo($"[ShaderRemapper]   Injected modder albedo into _MainTex ({modderAlbedo.name})");
             }
             else
             {
@@ -112,7 +112,7 @@ namespace HoboModPlugin.Framework
             if (fixedMat.HasProperty("_PBRMap"))
             {
                 fixedMat.SetTexture("_PBRMap", _neutralPBR);
-                _log?.LogInfo("[ShaderRemapper]   Injected neutral _PBRMap (matte, no metallic)");
+               // _log?.LogInfo("[ShaderRemapper]   Injected neutral _PBRMap (matte, no metallic)");
             }
 
             // Ensure full opacity
@@ -143,7 +143,7 @@ namespace HoboModPlugin.Framework
             _neutralPBR.SetPixel(0, 0, new Color(0.5f, 0.5f, 0.0f, 0.0f));
             _neutralPBR.Apply();
 
-            _log?.LogInfo("[ShaderRemapper] Generated 1×1 neutral PBR map in linear memory.");
+           // _log?.LogInfo("[ShaderRemapper] Generated 1×1 neutral PBR map in linear memory.");
         }
 
         /// <summary>

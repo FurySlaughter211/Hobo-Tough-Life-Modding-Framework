@@ -1,0 +1,42 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3_Complete_Project_Source", "3_Complete_Project_Source", "{3CC1BBF1-15FC-3799-DA8B-A4E45347C242}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{21210B76-6B62-3C89-A59A-4D903863B627}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoboMod.DevTools", "3_Complete_Project_Source\Source\HoboMod.DevTools\HoboMod.DevTools.csproj", "{0FEC166C-16BF-DCA7-352E-211CC7B9C822}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HoboModFramework", "HoboModFramework", "{0C23D568-CB38-0491-5639-526121993384}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoboModPlugin", "3_Complete_Project_Source\Source\HoboModFramework\HoboModPlugin.csproj", "{19DA7981-8AA4-E2C8-28FD-C3AF53886A70}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0FEC166C-16BF-DCA7-352E-211CC7B9C822}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FEC166C-16BF-DCA7-352E-211CC7B9C822}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FEC166C-16BF-DCA7-352E-211CC7B9C822}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FEC166C-16BF-DCA7-352E-211CC7B9C822}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19DA7981-8AA4-E2C8-28FD-C3AF53886A70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19DA7981-8AA4-E2C8-28FD-C3AF53886A70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19DA7981-8AA4-E2C8-28FD-C3AF53886A70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19DA7981-8AA4-E2C8-28FD-C3AF53886A70}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{21210B76-6B62-3C89-A59A-4D903863B627} = {3CC1BBF1-15FC-3799-DA8B-A4E45347C242}
+		{0FEC166C-16BF-DCA7-352E-211CC7B9C822} = {21210B76-6B62-3C89-A59A-4D903863B627}
+		{0C23D568-CB38-0491-5639-526121993384} = {21210B76-6B62-3C89-A59A-4D903863B627}
+		{19DA7981-8AA4-E2C8-28FD-C3AF53886A70} = {0C23D568-CB38-0491-5639-526121993384}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3BA456F4-B5ED-4B21-A0C3-503D2EBACAAF}
+	EndGlobalSection
+EndGlobal

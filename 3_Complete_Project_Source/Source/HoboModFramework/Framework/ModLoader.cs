@@ -354,7 +354,7 @@ namespace HoboModPlugin.Framework
         // === Additional Modder Properties ===
 
         [JsonProperty("buffetGame")]
-        public bool BuffetGame { get; set; } = false;  // Triggers buffet minigame when consumed
+        public bool BuffetGame { get; set; } = false;  // Toggle for the minigame when looting items
 
         [JsonProperty("buffetDifficulty")]
         public int BuffetDifficulty { get; set; } = 0;  // Buffet minigame difficulty level
@@ -375,7 +375,7 @@ namespace HoboModPlugin.Framework
         [JsonProperty("isModify")]
         public bool IsModify { get; set; } = false;  // Patch existing item instead of creating new
 
-        [JsonProperty("targetItemId")]
+        [JsonProperty("TargetItemId")]
         public uint TargetItemId { get; set; } = 0;  // ID of vanilla item to modify
 
         // Gear-specific properties
@@ -432,7 +432,7 @@ namespace HoboModPlugin.Framework
     }
 
     /// <summary>
-    /// Effect definition for consumables (legacy, for runtime effects)
+    /// Effect definition for consumables
     /// </summary>
     public class EffectDefinition
     {

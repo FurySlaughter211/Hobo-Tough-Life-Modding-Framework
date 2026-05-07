@@ -57,11 +57,6 @@ namespace HoboModPlugin
 
             Framework = new FrameworkManager(Log, pluginPath);
 
-            // ShaderRegistry is DEPRECATED — the game uses a proprietary
-            // "Render Pipeline/DitherLit" shader for all animated NPCs. The generic
-            // Standard shader has its skinning math stripped by IL2CPP. We now clone
-            // the native DitherLit shader directly from vanilla NPCs at runtime.
-            // ShaderRegistry.Initialize(Log);
 
             // Discover mods early (before game databases load)
             Framework.DiscoverMods();
