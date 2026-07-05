@@ -186,6 +186,10 @@ namespace HoboModPlugin.Framework
         // Avatar overrides - replace full NPC models with custom characters from AssetBundles
         [JsonProperty("avatarOverrides")]
         public List<AvatarOverrideDefinition> AvatarOverrides { get; set; } = new();
+
+        // Opt-in flag for the layered clothing system
+        [JsonProperty("enableLayering")]
+        public bool EnableLayering { get; set; } = false;
     }
 
     /// <summary>
@@ -377,6 +381,8 @@ namespace HoboModPlugin.Framework
 
         [JsonProperty("TargetItemId")]
         public uint TargetItemId { get; set; } = 0;  // ID of vanilla item to modify
+       
+
 
         // Gear-specific properties
         [JsonProperty("category")]
@@ -429,6 +435,9 @@ namespace HoboModPlugin.Framework
 
         [JsonProperty("value")]
         public int Value { get; set; } = 0;
+
+        [JsonProperty("replace")]
+        public string ReplaceStat { get ; set ;} = ""; // Target stat to replace for isModify
     }
 
     /// <summary>
@@ -460,6 +469,9 @@ namespace HoboModPlugin.Framework
 
         [JsonProperty("addictedValue")]
         public int AddictedValue { get; set; } = 0;  // isAddictedValue
+
+        [JsonProperty("replace")]
+        public string ReplaceStat { get; set; } = ""; // Target stat to replace for isModify
     }
 
     /// <summary>

@@ -421,14 +421,12 @@ namespace HoboModPlugin.Framework
                     try
                     {
                         if (!player.HasRecipe(registered.NumericId))
-                        {
-                            _log.LogInfo($"  Is in Global database? {RecipeDatabase.recipes.ContainsKey(registered.NumericId)}"); 
-
+                        { 
                             player.AddRecipe(registered.GameRecipe, false, false);
-                            _log.LogInfo($"  Auto-unlocked recipe: {registered.Definition.Id}, {registered.NumericId}, {player.HasRecipe(registered.NumericId)}"); //Debug
+                            _log.LogInfo($"  Auto-unlocked recipe: {registered.Definition.Id}");
                         }
                     } 
-                        catch  (System.Exception ex) {_log.LogError($"Failed to auto-unlock recipe {registered.Definition.Id}: {ex.Message}");} //debug
+                        catch  (System.Exception ex) {_log.LogError($"Failed to auto-unlock recipe {registered.Definition.Id}: {ex.Message}");} 
                     
                 }
                 else

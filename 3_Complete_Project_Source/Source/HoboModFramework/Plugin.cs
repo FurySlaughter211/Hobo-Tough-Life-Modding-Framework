@@ -8,6 +8,7 @@ using HoboModPlugin.Features;
 using HoboModPlugin.Framework;
 using Il2CppInterop.Runtime.Injection;
 using UnityEngine;
+using Core.Net;
 
 
 namespace HoboModPlugin
@@ -86,7 +87,6 @@ namespace HoboModPlugin
 
     /// <summary>
     /// MonoBehaviour that runs Update every frame to handle hotkeys.
-    /// Framework does nothing on its own - all features come from mods.
     /// </summary>
     public class ModUpdater : MonoBehaviour
     {
@@ -96,10 +96,11 @@ namespace HoboModPlugin
         {
             // Check for custom object spawn hotkeys
             CustomObjectRegistry.CheckHotkeys();
-
-
-
         }
+
+
+
+        
 
 
     }

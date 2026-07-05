@@ -1,0 +1,14 @@
+{
+    "id": "test_consumable_mod",
+    "name": "Test Consumable Stat Modification",
+    "version": "1.0.0",
+    "author": "Antigravity",
+    "description": "Tests consumable stat replacement and high values",
+    "devHotkeys": [
+        {
+            "key": "F10",
+            "action": "spawn_vanilla",
+            "itemId": "111"
+        }
+    ]
+}

@@ -754,9 +754,11 @@ namespace HoboModPlugin.Framework
                 // Custom .png icon from mod folder
                 var customIcon = LoadIcon(registered);
                 if (customIcon != null)
-                   {targetItem.icon = customIcon;
+                {
+                    targetItem.icon = customIcon;
                     targetItem._icon = customIcon;
-                   _log.LogInfo($"[isModify] Icon loaded for Item: {definition.TargetItemId}");}
+                   _log.LogInfo($"[isModify] Icon loaded for Item: {definition.TargetItemId}");
+                }
             }
             else if (rawJson.ContainsKey("referenceItemId") && definition.ReferenceItemId > 0 && items.ContainsKey(definition.ReferenceItemId))     
             {
@@ -784,29 +786,73 @@ namespace HoboModPlugin.Framework
 
               if (definition.Stats != null && definition.Stats.Count > 0)
               {
+                    List<int> modifiedIndices = new List <int>(); // This is a list that will hold the indices of the stats that have been modified.
+
                     foreach (var statDef in definition.Stats)
                     {
                         var parsedType = ParseStatType(statDef.Type);
-                        if (parsedType == null) continue;
+                        var replaceType = ParseStatType(statDef.ReplaceStat);
 
-                        bool found = false;
-                        foreach (var existing in gearTarget.parameterChanges)
+                        if (string.IsNullOrEmpty(statDef.ReplaceStat))
                         {
-                            if (existing.influencedParameterType == parsedType.Value)
+                            _log.LogWarning($"[isModify] Replacement stat is missing for item: {definition.TargetItemId}");
+                        }
+
+                        if (parsedType == null) 
+                        {
+                            _log.LogWarning($"[isModify] Couldnt find the named stat type: {statDef.Type}");
+                            continue;
+                        }
+
+                        var comparisonTarget = (replaceType != null) ? replaceType.Value : parsedType.Value;
+                        
+                        bool found = false;
+
+                        for (int i = 0; i < gearTarget.parameterChanges.Count; i++)
+                        {
+                            if(modifiedIndices.Contains(i)) continue; // Skip if we already modified the stat
+
+                            var existing = gearTarget.parameterChanges[i];
+                            
+                            if (existing.influencedParameterType == comparisonTarget)
                             {
+                                existing.influencedParameterType = parsedType.Value;
                                 existing.value = statDef.Value;
+
+                                modifiedIndices.Add(i);
                                 found = true;
-                                break;
+                                break;  
                             }
                         }
-                        if (!found)
-                          {
-                               gearTarget.parameterChanges.Add(new Gear.ParameterChange
+
+                        // Idempotency check: If original stat not found, check if it was already replaced
+                        if (!found && replaceType != null)
+                        {
+                            for (int i = 0; i < gearTarget.parameterChanges.Count; i++)
+                            {
+                                if (modifiedIndices.Contains(i)) continue;
+
+                                var existing = gearTarget.parameterChanges[i];
+                                if (existing.influencedParameterType == parsedType.Value)
                                 {
+                                    existing.value = statDef.Value;
+
+                                    modifiedIndices.Add(i);
+                                    found = true;
+                                    break;
+                                }
+                            }
+                        }
+
+                        if (!found)
+                        {
+                            gearTarget.parameterChanges.Add(new Gear.ParameterChange
+                            {
                                 influencedParameterType = parsedType.Value,
                                 value = statDef.Value
-                             });
-                           }
+                            });
+                            modifiedIndices.Add(gearTarget.parameterChanges.Count - 1); //Track the new slot too
+                        }
                     }  
                }
             }
@@ -818,41 +864,69 @@ namespace HoboModPlugin.Framework
             {
                 if(definition.StatChanges != null && definition.StatChanges.Count > 0)
                 {
+                    List<int> modifiedIndices = new List<int>();
+
                     foreach(var changeDef in definition.StatChanges)
                     {
                         var parsedType = ParseStatType(changeDef.Stat);
+                        var replaceType = ParseStatType(changeDef.ReplaceStat);
+
                         if(parsedType == null) continue;
 
+                        var comparisonTarget = (replaceType != null) ? replaceType.Value : parsedType.Value;
                         bool found = false;
 
-                        foreach (var existing in consumTarget.parameterChanges)
+                        for (int i = 0; i < consumTarget.parameterChanges.Count; i++)
                         {
-                            if(existing.influencedParameterType == parsedType.Value)
+                            if(modifiedIndices.Contains(i)) continue;
+
+                            var existing = consumTarget.parameterChanges[i];
+
+                            if(existing.influencedParameterType == comparisonTarget)
                             {
+                                existing.influencedParameterType = parsedType.Value;
                                 existing.normalValue = (float)changeDef.Value;
                                 existing.isAddictedValue = (float)changeDef.AddictedValue;
+
+                                modifiedIndices.Add(i);
                                 found = true;
                                 break;
                             }
                         }
 
-                        if(!found)
+                        // Idempotency check: If original stat not found, check if it was already replaced
+                        if (!found && replaceType != null)
                         {
-                            consumTarget.parameterChanges.Add(new Consumable.ParameterChange(parsedType.Value, changeDef.Value, changeDef.AddictedValue));
+                            for (int i = 0; i < consumTarget.parameterChanges.Count; i++)
+                            {
+                                if(modifiedIndices.Contains(i)) continue;
+
+                                var existing = consumTarget.parameterChanges[i];
+                                if (existing.influencedParameterType == parsedType.Value)
+                                {
+                                    existing.normalValue = (float)changeDef.Value;
+                                    existing.isAddictedValue = (float)changeDef.AddictedValue;
+
+                                    modifiedIndices.Add(i);
+                                    found = true;
+                                    break;
+                                }
+                            }
                         }
 
-                
+                        if(!found)
+                        {
+                            consumTarget.parameterChanges.Add(new Consumable.ParameterChange(parsedType.Value, changeDef.AddictedValue, changeDef.Value));
+                            modifiedIndices.Add(consumTarget.parameterChanges.Count - 1);
+                        }
                     }
-                    
                 }
             
-
              if (rawJson.ContainsKey("addictionType") && !string.IsNullOrEmpty(definition.AddictionType) && Enum.TryParse<CharacterAddiction.TypeAddiction>(definition.AddictionType, true, out var addiction))
                 {
                     consumTarget.typeAddiction = addiction;
                 }
             }
-
         }
 
         /// <summary>

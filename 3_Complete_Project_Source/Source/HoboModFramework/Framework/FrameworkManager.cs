@@ -65,6 +65,9 @@ namespace HoboModPlugin.Framework
             // === Initialize Static Object Placement System ===
             StaticObjectManager.Initialize(log);
 
+            // === Initialize Layering System (patches registered but inactive until a mod opts in) ===
+            LayeringManager.Initialize(log);
+
             // === Scene Load Hook ===
             // Fires when any scene loads (Main, Graphics, Game, etc.)
             // Used to apply model overrides at the right time
@@ -94,7 +97,15 @@ namespace HoboModPlugin.Framework
                 RecipeRegistry.LoadVanillaUnlockRecipesFromMod(mod);
             }
 
-
+            // Activate layering system if any loaded mod declared enableLayering: true
+            foreach (var mod in ModLoader.LoadedMods)
+            {
+                if (mod.EnableLayering)
+                {
+                    LayeringManager.Activate();
+                    break;
+                }
+            }
         }
         /// <summary>
         /// Load and register asset overrides from a mod

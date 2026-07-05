@@ -1,0 +1,12 @@
+{
+    "targetItemId": 111,
+    "isModify": true,
+    "statChanges": [
+        {
+            "stat": "morale",
+            "value": 99,
+            "addictedValue": 99,
+            "replace": "energy"
+        }
+    ]
+}
